@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustev.Api", "Trustev.Api\Trustev.Api.csproj", "{0C0726DA-CFA3-4E6D-87FC-9585D058FB2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trustev.Libraries.Api.UnitTest", "Trustev.Libraries.Api.UnitTest\Trustev.Libraries.Api.UnitTest.csproj", "{A9BEF8E6-7F97-469D-BE60-BC11FA476AAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C0726DA-CFA3-4E6D-87FC-9585D058FB2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0726DA-CFA3-4E6D-87FC-9585D058FB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0726DA-CFA3-4E6D-87FC-9585D058FB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0726DA-CFA3-4E6D-87FC-9585D058FB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9BEF8E6-7F97-469D-BE60-BC11FA476AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9BEF8E6-7F97-469D-BE60-BC11FA476AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9BEF8E6-7F97-469D-BE60-BC11FA476AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9BEF8E6-7F97-469D-BE60-BC11FA476AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
