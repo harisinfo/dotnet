@@ -3,6 +3,13 @@ Who WhichProject fileversion
 #YouTrackIssueId - item details name - change desc
 
 2013 04 08 ===========================================
+DD Trustev.Api 1.0.0.1
+- v1/Authenticate.cs - Added Serialization Reference, added constructors and made changes to GetToken method
+
+DD Trustev.Api.UnitTest 1.0.0.1
+- v1/AuthenticateTest.cs - Added
+- v1/Helpers/AuthenticationHelperTest.cs - Added reference and some new unit tests
+
 CK Trustev.Api 1.0.0.0
 - Initial commit
 
