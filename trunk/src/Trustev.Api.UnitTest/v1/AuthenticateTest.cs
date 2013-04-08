@@ -58,5 +58,19 @@ namespace Trustev.Api.UnitTest.v1
             Assert.AreEqual(response.Code, 401);
         }
 
+
+        [Test]
+        public void GetToken500Test()
+        {
+            Authenticate service = new Authenticate(_username, _password, _sharedsecret);
+            AuthResponse response = service.GetToken();
+
+            Debug.Write(String.Format("Response Code: {0}", response.Code));
+            Debug.Write(String.Format("Response Message: {0}", response.Message));
+            Debug.Write(String.Format("Token: {0}", response.Token.Token));
+
+            Assert.AreEqual(response.Code, 500);
+        }
+
     }
 }

@@ -38,6 +38,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="v1\AuthenticateTest.cs" />
     <Compile Include="v1\Helpers\AuthenticationHelperTest.cs" />
+    <Compile Include="v1\Helpers\ServiceConfigHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
