@@ -49,7 +49,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="v1\Authenticate.cs" />
+    <Compile Include="v1\Constants.cs" />
     <Compile Include="v1\Helpers\AuthenticationHelper.cs" />
+    <Compile Include="v1\Helpers\ServiceConfigHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

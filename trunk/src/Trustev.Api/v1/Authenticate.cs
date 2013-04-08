@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Net.Security;
 
@@ -16,8 +17,8 @@ namespace Trustev.Api.v1
         private String Secret { get; set; }
         private DateTime Timestamp { get; set; }
 
-        protected String Token { get; set; }
-        protected DateTime TokenExpiry { get; set; }
+        public String Token { get; set; }
+        public DateTime TokenExpiry { get; set; }
 
         public Authenticate(String username, String password, String secret)
         {
@@ -27,13 +28,13 @@ namespace Trustev.Api.v1
             Timestamp = DateTime.UtcNow;
         }
 
-        private void GetToken()
+        public AuthResponse GetToken()
         {
-            AuthenticationServiceClient service = new AuthenticationServiceClient();
+            AuthenticationServiceClient service = (AuthenticationServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Authentication);
 
             string passwordHash = AuthenticationHelper.Instance.PasswordHashHelper(Password, Secret, Timestamp);
             string sha256Hash = AuthenticationHelper.Instance.Sha256HashHelper(UserName, Secret, Timestamp);
-
+            
             AuthResponse response = service.GetToken(new SimpleLoginRequest
             {
                 UserName = UserName,
@@ -44,6 +45,8 @@ namespace Trustev.Api.v1
 
             Token = response.Token.Token;
             TokenExpiry = response.Token.ExpireAt;
+
+            return response;
         }
     }
 
