@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
-using Trustev.Api.v1.Helpers;
 
+using Trustev.Api.v1.Helpers;
 
 namespace Trustev.Libraries.Api.UnitTest.v1.Helpers
 {
 
     [TestFixture]
-    public class AuthenticationHelperTest : AuthenticationHelper
+    public class AuthenticationHelperTest
 
     {
         private string _username;
         private DateTime _timestamp;
-
+        
         [SetUp]
         public void Setup()
         {
@@ -28,7 +28,7 @@ namespace Trustev.Libraries.Api.UnitTest.v1.Helpers
         [Test]
         public void Create256HashTest()
         {
-            String result = Create256Hash(_username);
+            String result = AuthenticationHelper.Instance.Create256Hash(_username);
 
             
             Assert.IsNotNullOrEmpty(result);
