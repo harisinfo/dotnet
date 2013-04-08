@@ -1,1 +1,0 @@
-C:\Projects\Trustev.Libraries.Net\Trunk\src\NET\Trustev.Api\Trustev.Api\obj\Release\ResolveAssemblyReference.cache

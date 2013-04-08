@@ -1,8 +1,0 @@
-C:\Users\David\AppData\Local\Temporary Projects\ClassLibrary1\obj\Debug\ResolveAssemblyReference.cache
-C:\Projects\Trustev.Libraries.Net\Trunk\src\NET\Trustev.Api\Trustev.Api\obj\Debug\ResolveAssemblyReference.cache
-C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\bin\Debug\Trustev.Api.dll.config
-C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\bin\Debug\Trustev.Api.dll
-C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\bin\Debug\Trustev.Api.pdb
-C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\obj\Debug\Trustev.Api.dll
-C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\obj\Debug\Trustev.Api.pdb
-C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\obj\Debug\Trustev.Api.csprojResolveAssemblyReference.cache
