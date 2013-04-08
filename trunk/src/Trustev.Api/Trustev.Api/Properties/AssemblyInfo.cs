@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Trustev")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Trustev.Api")]
+[assembly: AssemblyDescription("Trustev.Api")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Trustev")]
+[assembly: AssemblyProduct("Trustev.Api")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -5,3 +5,4 @@ C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\bin\Debug\Tr
 C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\bin\Debug\Trustev.Api.pdb
 C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\obj\Debug\Trustev.Api.dll
 C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\obj\Debug\Trustev.Api.pdb
+C:\Projects\Trustev.Libraries.Net\trunk\src\Trustev.Api\Trustev.Api\obj\Debug\Trustev.Api.csprojResolveAssemblyReference.cache

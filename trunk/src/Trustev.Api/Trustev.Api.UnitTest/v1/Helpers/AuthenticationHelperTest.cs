@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 using Trustev.Api.v1.Helpers;
 
-namespace Trustev.Libraries.Api.UnitTest.v1.Helpers
+namespace Trustev.Api.UnitTest.v1.Helpers
 {
 
     [TestFixture]
