@@ -23,9 +23,9 @@ namespace Trustev.Api.UnitTest.v1
         public void Setup()
         {
 
-            _username = "trustev";
-            _password = "trustev123";
-            _sharedsecret = "c37e5b4b13954cd5a13bf37155427577";
+            _username = "testtrustev";
+            _password = "6af92077e0f325a0df39f694cfecc113";
+            _sharedsecret = "5160574c3159333093f1c7bf92756366";
             _timestamp = DateTime.UtcNow;
 
         }
@@ -35,27 +35,40 @@ namespace Trustev.Api.UnitTest.v1
         [Test]
         public void GetTokenTest()
         {
-            Authenticate service = new Authenticate(_username, _password, _sharedsecret);
-            AuthResponse response = service.GetToken();
+            try
+            {
+                Authenticate service = new Authenticate(_username, _password, _sharedsecret);
+                AuthResponse response = service.GetToken();
 
-            Debug.Write(String.Format("Response Code: {0}", response.Code));
-            Debug.Write(String.Format("Response Message: {0}", response.Message));
-            Debug.Write(String.Format("Token: {0}", response.Token.Token));
+                Debug.WriteLine(String.Format("Response Code: {0}", response.Code));
+                Debug.WriteLine(String.Format("Response Message: {0}", response.Message));
+                Debug.WriteLine(String.Format("Token: {0}", response.Token.Token));
 
-            Assert.AreEqual(response.Code, 200);
+                Assert.AreEqual(response.Code, 200);
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         [Test]
         public void GetToken401Test()
         {
-            Authenticate service = new Authenticate(String.Empty, _password, _sharedsecret);
-            AuthResponse response = service.GetToken();
+            try
+            {
+                Authenticate service = new Authenticate("test", _password, _sharedsecret);
+                AuthResponse response = service.GetToken();
 
-            Debug.Write(String.Format("Response Code: {0}", response.Code));
-            Debug.Write(String.Format("Response Message: {0}", response.Message));
-            Debug.Write(String.Format("Token: {0}", response.Token.Token));
+                Debug.WriteLine(String.Format("Response Code: {0}", response.Code));
+                Debug.WriteLine(String.Format("Response Message: {0}", response.Message));
+                Debug.WriteLine(String.Format("Token: {0}", response.Token.Token));
 
-            Assert.AreEqual(response.Code, 401);
+                Assert.AreEqual(response.Code, 401);
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual(ex.InnerException.Message, "The remote server returned an error: (401) Unauthorized.");
+            }
         }
 
     }
