@@ -10,7 +10,9 @@ namespace Trustev.Api.v1
         //Service Name Types
         public enum ServiceType
         {
-            Authentication
+            Authentication,
+            Social
         }
+
     }
 }
