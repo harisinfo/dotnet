@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Services" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\v1.Services.Social\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\v1.Services.Authentication\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -52,12 +58,36 @@
     <Compile Include="v1\Constants.cs" />
     <Compile Include="v1\Helpers\AuthenticationHelper.cs" />
     <Compile Include="v1\Helpers\ServiceConfigHelper.cs" />
+    <Compile Include="v1\Social.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Service References\v1.Services.Social\api.trustev.com.wsdl" />
+    <None Include="Service References\v1.Services.Social\api.trustev.com.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Social\service.wsdl" />
+    <None Include="Service References\v1.Services.Social\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Social\Social.Verify.Types.DataContracts.Authentication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Social\Social.Verify.Types.DataContracts.Social.Requests.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Social\Social.Verify.Types.DataContracts.Social.Responses.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Social\Social.Verify.Types.DataContracts.Social.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Social\Social.Verify.Types.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\v1.Services.Authentication\AuthenticationService.wsdl" />
     <None Include="Service References\v1.Services.Authentication\AuthenticationService.xsd">
       <SubType>Designer</SubType>
@@ -75,8 +105,18 @@
     <None Include="Service References\v1.Services.Authentication\Trustev.Api.v1.Services.Authentication.AuthResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\v1.Services.Social\Trustev.Api.v1.Services.Social.AddProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Social\Trustev.Api.v1.Services.Social.DeleteProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Social\Trustev.Api.v1.Services.Social.UpdateProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\v1.Services.Social\" />
     <WCFMetadataStorage Include="Service References\v1.Services.Authentication\" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +130,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\v1.Services.Authentication\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Social\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Social\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Social\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
