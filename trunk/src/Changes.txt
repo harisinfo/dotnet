@@ -2,8 +2,12 @@ yyyyMMdd=============================================
 Who WhichProject fileversion
 #YouTrackIssueId - item details name - change desc
 
+2013 04 10 ===========================================
+CK Trustev.Api 1.0.0.2
+- v1/Social.cs - Inherit from Authenticate, set Token for each request
 
-
+CK Trustev.Api.UnitTest 1.0.0.3
+- v1/SocialTest.cs - Added reference to Social and performing test call.
 
 2013 04 08 ===========================================
 

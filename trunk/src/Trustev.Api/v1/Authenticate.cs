@@ -12,7 +12,7 @@ namespace Trustev.Api.v1
 {
     public class Authenticate
     {
-        private String UserName { get; set; }
+        protected String UserName { get; set; }
         private String Password { get; set; }
         private String Secret { get; set; }
         private DateTime Timestamp { get; set; }
