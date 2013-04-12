@@ -4,21 +4,37 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Net.Security;
-
 using Trustev.Api.v1.Helpers;
 using Trustev.Api.v1.Services.Authentication;
+using System.Diagnostics;
 
 namespace Trustev.Api.v1
 {
     public class Authenticate
     {
-        protected String UserName { get; set; }
+        public String UserName { get; set; }
         private String Password { get; set; }
         private String Secret { get; set; }
         private DateTime Timestamp { get; set; }
+        private String _token;
+        public String TransactionNumber { get; set; }
+        public String Token
+        {
+            get
+            {
+                ValidateToken();
+                return _token;
+            }
+            set
+            {
+                _token = value;
+            }
+        }
+        public DateTime TokenExpiry {get;set;}
 
-        public String Token { get; set; }
-        public DateTime TokenExpiry { get; set; }
+        protected Authenticate()
+        {
+        }
 
         public Authenticate(String username, String password, String secret)
         {
@@ -47,6 +63,19 @@ namespace Trustev.Api.v1
             TokenExpiry = response.Token.ExpireAt;
 
             return response;
+        }
+
+        private void ValidateToken()
+        {
+
+            if (TokenExpiry < DateTime.UtcNow)
+            {
+                Debug.Write("Error: ValidateToken:Invalid token.");
+
+                GetToken();
+
+            }
+
         }
     }
 

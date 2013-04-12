@@ -3,6 +3,16 @@ Who WhichProject fileversion
 #YouTrackIssueId - item details name - change desc
 
 2013 04 10 ===========================================
+
+DD Trustev.Api 1.0.0.2
+- v1/Social.cs - added
+- v1/Constants - added social service type
+- Added new service reference called v1.Services.Social
+
+DD Trustev.Api.UnitTest 1.0.0.3
+- v1/SocialTest.cs - Added
+- v1/AuthenticateTest.cs - Added more unit tests
+
 CK Trustev.Api 1.0.0.2
 - v1/Social.cs - Inherit from Authenticate, set Token for each request
 

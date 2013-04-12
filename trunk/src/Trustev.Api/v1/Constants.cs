@@ -11,7 +11,8 @@ namespace Trustev.Api.v1
         public enum ServiceType
         {
             Authentication,
-            Social
+            Social,
+            Transaction
         }
 
     }

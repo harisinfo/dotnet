@@ -6,6 +6,7 @@ using System.Text;
 
 using Trustev.Api.v1.Services.Authentication;
 using Trustev.Api.v1.Services.Social;
+using Trustev.Api.v1.Services.Transaction;
 
 namespace Trustev.Api.v1.Helpers
 {
@@ -45,6 +46,10 @@ namespace Trustev.Api.v1.Helpers
                 case Constants.ServiceType.Social:
                     address = new EndpointAddress(String.Format("{0}/SocialService.svc/soap", TrustevApiBaseAddress));
                     return new SocialServiceClient(binding, address);
+                case Constants.ServiceType.Transaction:
+                    address = new EndpointAddress(String.Format("{0}/TransactionService.svc/soap", TrustevApiBaseAddress));
+                    return new TransactionServiceClient(binding, address);
+                    
                 default:
                     throw new Exception("Could not build a valid API Base URL and Binding");
             }

@@ -119,7 +119,7 @@ public class AuthenticateTest
 
     }
 
-        [Test]
+    [Test]
     public void GetToken400Test()
     {
 
@@ -134,6 +134,22 @@ public class AuthenticateTest
 
 
             Assert.AreEqual(response.Code, 400);
+
+        }
+
+        catch (Exception ex)
+        {
+        }
+
+    }
+
+    [Test]
+    public void CheckTokenExpired()
+    {
+
+        try
+        {
+            
 
         }
 

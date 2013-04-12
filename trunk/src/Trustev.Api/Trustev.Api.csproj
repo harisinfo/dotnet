@@ -54,11 +54,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\v1.Services.Transaction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="v1\Authenticate.cs" />
     <Compile Include="v1\Constants.cs" />
     <Compile Include="v1\Helpers\AuthenticationHelper.cs" />
     <Compile Include="v1\Helpers\ServiceConfigHelper.cs" />
     <Compile Include="v1\Social.cs" />
+    <Compile Include="v1\Transaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -114,10 +120,49 @@
     <None Include="Service References\v1.Services.Social\Trustev.Api.v1.Services.Social.UpdateProfileResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\v1.Services.Transaction\api.trustev.com.wsdl" />
+    <None Include="Service References\v1.Services.Transaction\api.trustev.com.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\service.wsdl" />
+    <None Include="Service References\v1.Services.Transaction\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Authentication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Social.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Transaction.Requests.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Transaction.Responses.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Transaction.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Trustev.Api.v1.Services.Transaction.AddTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Trustev.Api.v1.Services.Transaction.GetTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Trustev.Api.v1.Services.Transaction.UpdateStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Transaction\Trustev.Api.v1.Services.Transaction.UpdateTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\v1.Services.Authentication\" />
     <WCFMetadataStorage Include="Service References\v1.Services.Social\" />
+    <WCFMetadataStorage Include="Service References\v1.Services.Transaction\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\v1.Services.Authentication\AuthenticationService.disco" />
@@ -145,6 +190,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\v1.Services.Social\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Transaction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Transaction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Transaction\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
