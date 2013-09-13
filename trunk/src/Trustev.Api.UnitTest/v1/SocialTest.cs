@@ -48,27 +48,22 @@ namespace Trustev.Api.UnitTest.v1
         [Test]
         public void AddProfile1()
         {
-            try
-            {
-                {
-                    Social socialWrapper = new Social();
+           
+                
+                    Trustev.Api.v1.Social socialWrapper = new Trustev.Api.v1.Social();
 
                     AddProfileRequest request = new AddProfileRequest();
                     request.UserName = "trustev";
                     List<SocialNetwork> socialNetworks = new List<SocialNetwork>();
                     SocialNetwork socialNetwork = new SocialNetwork { Id = _Id, Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Facebook, LongTermAccessToken = _longtermaccesstoken, Secret = _secret, ShortTermAccessToken = _shorttermaccesstoken, LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2) };
                     socialNetworks.Add(null);
-   
+
                     request.SocialNetworks = socialNetworks.ToArray();
                     AddProfileResponse response = socialWrapper.AddProfile(request);
 
                     Console.WriteLine("\nMessage: {0} Code: {1}", response.Message, response.Code);
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
+                
+            
 
         }
 
@@ -78,16 +73,16 @@ namespace Trustev.Api.UnitTest.v1
             try
             {
 
-                Social socialWrapper = new Social();
+                Trustev.Api.v1.Social socialWrapper = new Trustev.Api.v1.Social();
 
                 AddProfileRequest request = new AddProfileRequest();
                 request.UserName = "trustev";
                 IList<SocialNetwork> socialNetworks = new List<SocialNetwork>();
 
-                SocialNetwork socialNetwork1 = new SocialNetwork { Id = "0", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Facebook, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2)};
-                SocialNetwork socialNetwork2 = new SocialNetwork { Id = "1", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Twitter, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2)};
-                SocialNetwork socialNetwork3 = new SocialNetwork { Id = "2", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.LinkedIn, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2)};
-                SocialNetwork socialNetwork4 = new SocialNetwork { Id = "3", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Trustev, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2)};
+                SocialNetwork socialNetwork1 = new SocialNetwork { Id = "0", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Facebook, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2) };
+                SocialNetwork socialNetwork2 = new SocialNetwork { Id = "1", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Twitter, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2) };
+                SocialNetwork socialNetwork3 = new SocialNetwork { Id = "2", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.LinkedIn, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2) };
+                SocialNetwork socialNetwork4 = new SocialNetwork { Id = "3", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Trustev, LongTermAccessToken = "long term token", Secret = "secret", ShortTermAccessToken = "short term token", LongTermAccessTokenExpiry = DateTime.UtcNow.AddDays(+30), ShortTermAccessTokenExpiry = DateTime.UtcNow.AddHours(+2) };
 
 
                 socialNetworks.Add(socialNetwork1);
@@ -103,18 +98,16 @@ namespace Trustev.Api.UnitTest.v1
             {
 
             }
-                
+
         }
 
 
         [Test]
         public void UpdateProfile()
-            
         {
-            
 
-            Social socialWrapper = new Social();
 
+            Trustev.Api.v1.Social socialWrapper = new Trustev.Api.v1.Social();
             UpdateProfileRequest request = new UpdateProfileRequest();
 
             request.UserName = "testtrustev";
@@ -135,14 +128,14 @@ namespace Trustev.Api.UnitTest.v1
         [Test]
         public void DeleteProfile()
         {
-            Social socialWrapper = new Social();
+            Trustev.Api.v1.Social socialWrapper = new Trustev.Api.v1.Social();
 
 
             DeleteProfileRequest request = new DeleteProfileRequest();
 
             request.UserName = "trustev";
 
-            SocialNetwork socialNetwork4 = new SocialNetwork { Id = "3", Type =Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Facebook };
+            SocialNetwork socialNetwork4 = new SocialNetwork { Id = "3", Type = Trustev.Api.v1.Services.Social.ConstantsSocialNetworkType.Facebook };
 
             IList<SocialNetwork> socialNetworks = new List<SocialNetwork>();
             socialNetworks.Remove(socialNetwork4);

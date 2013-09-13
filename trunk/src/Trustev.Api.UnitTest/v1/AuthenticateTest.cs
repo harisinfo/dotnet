@@ -38,9 +38,9 @@ public class AuthenticateTest
             Authenticate service = new Authenticate(_username, _password, _sharedsecret);
             AuthResponse response = service.GetToken();
 
-            Debug.WriteLine(String.Format("Response Code: {0}", response.Code));
-            Debug.WriteLine(String.Format("Response Message: {0}", response.Message));
-            Debug.WriteLine(String.Format("Token: {0}", response.Token.Token));
+            Console.WriteLine(String.Format("Response Code: {0}", response.Code));
+            Console.WriteLine(String.Format("Response Message: {0}", response.Message));
+            Console.WriteLine(String.Format("Token: {0}", response.Token.Token));
 
             Assert.AreEqual(response.Code, 200);
         }

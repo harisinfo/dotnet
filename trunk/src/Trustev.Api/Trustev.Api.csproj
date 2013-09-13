@@ -49,6 +49,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\v1.Services.Profile\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\v1.Services.Social\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -59,6 +64,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\v1_1.Services.Authentication\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\v1_1.Services.Profile\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\v1_1.Services.Social\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\v1_1.Services.Transaction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="v1.1\Authenticate.cs" />
+    <Compile Include="v1.1\Constants.cs" />
+    <Compile Include="v1.1\Helpers\AuthenticationHelper.cs" />
+    <Compile Include="v1.1\Helpers\ServiceConfigHelper.cs" />
+    <Compile Include="v1.1\Profile.cs" />
+    <Compile Include="v1.1\Social.cs" />
+    <Compile Include="v1.1\Transaction.cs" />
     <Compile Include="v1\Authenticate.cs" />
     <Compile Include="v1\Constants.cs" />
     <Compile Include="v1\Helpers\AuthenticationHelper.cs" />
@@ -86,6 +118,38 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\v1.Services.Authentication\Trustev.Api.v1.Services.Authentication.AuthResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService.wsdl" />
+    <None Include="Service References\v1.Services.Profile\ProfileService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService1.wsdl" />
+    <None Include="Service References\v1.Services.Profile\ProfileService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\ProfileService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1.Services.Profile\Trustev.Api.v1.Services.Profile.AddressVerificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Profile\Trustev.Api.v1.Services.Profile.HistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1.Services.Profile\Trustev.Api.v1.Services.Profile.MostRecentResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\v1.Services.Social\SocialService.wsdl" />
@@ -120,30 +184,30 @@
     <None Include="Service References\v1.Services.Social\Trustev.Api.v1.Services.Social.UpdateProfileResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\v1.Services.Transaction\api.trustev.com.wsdl" />
-    <None Include="Service References\v1.Services.Transaction\api.trustev.com.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService.wsdl" />
+    <None Include="Service References\v1.Services.Transaction\TransactionService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\service.wsdl" />
-    <None Include="Service References\v1.Services.Transaction\service.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService1.wsdl" />
+    <None Include="Service References\v1.Services.Transaction\TransactionService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Authentication.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Social.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Transaction.Requests.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Transaction.Responses.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.DataContracts.Transaction.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService6.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\v1.Services.Transaction\Social.Verify.Types.xsd">
+    <None Include="Service References\v1.Services.Transaction\TransactionService7.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\v1.Services.Transaction\Trustev.Api.v1.Services.Transaction.AddTransactionResponse.datasource">
@@ -158,11 +222,114 @@
     <None Include="Service References\v1.Services.Transaction\Trustev.Api.v1.Services.Transaction.UpdateTransactionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService.wsdl" />
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService1.wsdl" />
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Authentication\Trustev.Api.v1_1.Services.Authentication.CreateTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService.wsdl" />
+    <None Include="Service References\v1_1.Services.Profile\ProfileService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService1.wsdl" />
+    <None Include="Service References\v1_1.Services.Profile\ProfileService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\Trustev.Api.v1_1.Services.Profile.AddressVerificationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\Trustev.Api.v1_1.Services.Profile.GetProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1_1.Services.Social\SocialService.wsdl" />
+    <None Include="Service References\v1_1.Services.Social\SocialService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Social\SocialService1.wsdl" />
+    <None Include="Service References\v1_1.Services.Social\SocialService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Social\SocialService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Social\SocialService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Social\SocialService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Social\SocialService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService.wsdl" />
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService1.wsdl" />
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Transaction\Trustev.Api.v1_1.Services.Transaction.GetTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\v1.Services.Authentication\" />
+    <WCFMetadataStorage Include="Service References\v1.Services.Profile\" />
     <WCFMetadataStorage Include="Service References\v1.Services.Social\" />
     <WCFMetadataStorage Include="Service References\v1.Services.Transaction\" />
+    <WCFMetadataStorage Include="Service References\v1_1.Services.Authentication\" />
+    <WCFMetadataStorage Include="Service References\v1_1.Services.Profile\" />
+    <WCFMetadataStorage Include="Service References\v1_1.Services.Social\" />
+    <WCFMetadataStorage Include="Service References\v1_1.Services.Transaction\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\v1.Services.Authentication\AuthenticationService.disco" />
@@ -195,6 +362,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\v1.Services.Transaction\TransactionService.disco" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Service References\v1.Services.Transaction\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +372,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\v1.Services.Transaction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Profile\ProfileService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Profile\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Profile\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1.Services.Profile\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Authentication\AuthenticationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Authentication\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Authentication\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Authentication\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Social\SocialService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Social\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Social\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Social\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Transaction\TransactionService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Transaction\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Transaction\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Transaction\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Profile\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Profile\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\v1_1.Services.Profile\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

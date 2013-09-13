@@ -22,7 +22,7 @@ namespace Trustev.Api.v1
         {
             get
             {
-                ValidateToken();
+
                 return _token;
             }
             set
@@ -30,7 +30,7 @@ namespace Trustev.Api.v1
                 _token = value;
             }
         }
-        public DateTime TokenExpiry {get;set;}
+        public DateTime TokenExpiry { get; set; }
 
         protected Authenticate()
         {
@@ -50,7 +50,7 @@ namespace Trustev.Api.v1
 
             string passwordHash = AuthenticationHelper.Instance.PasswordHashHelper(Password, Secret, Timestamp);
             string sha256Hash = AuthenticationHelper.Instance.Sha256HashHelper(UserName, Secret, Timestamp);
-            
+
             AuthResponse response = service.GetToken(new SimpleLoginRequest
             {
                 UserName = UserName,
@@ -65,18 +65,6 @@ namespace Trustev.Api.v1
             return response;
         }
 
-        private void ValidateToken()
-        {
-
-            if (TokenExpiry < DateTime.UtcNow)
-            {
-                Debug.Write("Error: ValidateToken:Invalid token.");
-
-                GetToken();
-
-            }
-
-        }
     }
 
 
