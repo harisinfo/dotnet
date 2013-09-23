@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Responses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Responses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Shared" />
+  <xs:import schemaLocation="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" />
+  <xs:complexType name="GetProfileResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" base="q1:Response">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Shared" minOccurs="0" name="Profile" nillable="true" type="q2:TrustevProfile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetProfileResponse" nillable="true" type="tns:GetProfileResponse" />
+  <xs:complexType name="AddressVerificationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" base="q3:Response">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressVerificationResponse" nillable="true" type="tns:AddressVerificationResponse" />
+</xs:schema>

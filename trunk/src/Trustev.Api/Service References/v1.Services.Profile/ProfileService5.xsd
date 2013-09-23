@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.TrustevProfile" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.TrustevProfile" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://api.trustev.com/v1/ProfileService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
+  <xs:complexType name="OverallTrend">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Change" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="Trend" type="q1:Constants.Trend" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OverallTrend" nillable="true" type="tns:OverallTrend" />
+  <xs:complexType name="ArrayOfTrend">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Trend" nillable="true" type="tns:Trend" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrend" nillable="true" type="tns:ArrayOfTrend" />
+  <xs:complexType name="Trend">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="change" type="xs:decimal" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="trend" type="q2:Constants.Trend" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Trend" nillable="true" type="tns:Trend" />
+  <xs:complexType name="ArrayOfRankHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RankHistory" nillable="true" type="tns:RankHistory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRankHistory" nillable="true" type="tns:ArrayOfRankHistory" />
+  <xs:complexType name="RankHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateTime" type="xs:dateTime" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="Reason" type="q3:Constants.RankingStatusReason" />
+      <xs:element minOccurs="0" name="Score" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RankHistory" nillable="true" type="tns:RankHistory" />
+</xs:schema>

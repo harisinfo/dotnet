@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cee96362-de80-4a14-b51c-b4ca02423ddd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.trustev.com/v1.1/AuthenticationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AuthenticationService.xsd" MetadataType="Schema" ID="56706554-60ec-4b15-b418-dd2fb8153d97" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AuthenticationService.disco" MetadataType="Disco" ID="8aa570e7-b545-4974-a25e-906664f1bc6a" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?disco" />
+    <MetadataFile FileName="AuthenticationService1.xsd" MetadataType="Schema" ID="35515351-ddd3-43ad-aba5-634106d82080" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AuthenticationService2.xsd" MetadataType="Schema" ID="7633ac14-5d2e-4fab-98b3-76f6b1deb318" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AuthenticationService3.xsd" MetadataType="Schema" ID="57a521b1-76e8-464c-bc42-ff3b56bda48f" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AuthenticationService.wsdl" MetadataType="Wsdl" ID="0d3bac7f-6354-455a-8968-6d6473ce5638" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?wsdl" />
+    <MetadataFile FileName="AuthenticationService4.xsd" MetadataType="Schema" ID="64cc4021-62eb-4ad8-a536-a8f7cd8a10d2" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AuthenticationService1.wsdl" MetadataType="Wsdl" ID="80dd12e6-8845-4ce8-a058-c6ef0dd5f4fa" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/AuthenticationService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

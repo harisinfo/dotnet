@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.TrustevProfile.Requests" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.TrustevProfile.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://api.trustev.com/v1/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://api.trustev.com/v1/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.Authentication" />
+  <xs:complexType name="MostRecentRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.Authentication" base="q1:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerId" type="ser:guid" />
+          <xs:element minOccurs="0" name="NumberOfDates" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MostRecentRequest" nillable="true" type="tns:MostRecentRequest" />
+  <xs:complexType name="HistoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.Authentication" base="q2:RequestBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CustomerId" type="ser:guid" />
+          <xs:element minOccurs="0" name="NumberOfDates" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HistoryRequest" nillable="true" type="tns:HistoryRequest" />
+  <xs:complexType name="AddressVerificationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1.Authentication" base="q3:RequestBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddressVerificationRequest" nillable="true" type="tns:AddressVerificationRequest" />
+</xs:schema>

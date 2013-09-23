@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b2d73e6-3e87-40ff-82ac-ef4ffa54f07d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.trustev.com/v1.1/ProfileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProfileService.xsd" MetadataType="Schema" ID="17416703-8d95-416f-a01e-fcd13fc8836e" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProfileService.disco" MetadataType="Disco" ID="d5f8c95f-aef2-44be-a3c2-d51bb48208f7" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?disco" />
+    <MetadataFile FileName="ProfileService1.xsd" MetadataType="Schema" ID="c84f324b-6734-4f5a-ada9-6afde0b0fe96" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProfileService2.xsd" MetadataType="Schema" ID="aaa503b6-9b46-4e7a-9ee8-28152217203e" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProfileService3.xsd" MetadataType="Schema" ID="fb6c0006-37f7-4bc4-9602-611e5c48a285" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProfileService4.xsd" MetadataType="Schema" ID="810ffa5c-39d4-4b8c-9abe-dd25673a7781" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProfileService.wsdl" MetadataType="Wsdl" ID="8f624e27-e026-4ce2-8ce2-25a7075a08a7" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProfileService1.wsdl" MetadataType="Wsdl" ID="376139c5-7379-4979-b3e0-165101090d30" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?wsdl" />
+    <MetadataFile FileName="ProfileService5.xsd" MetadataType="Schema" ID="bf545434-41e1-4704-a949-4f9bc9bf3316" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProfileService6.xsd" MetadataType="Schema" ID="6be631c9-bb6c-4d9f-8180-f55f5606723c" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

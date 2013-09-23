@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://api.trustev.com" elementFormDefault="qualified" targetNamespace="https://api.trustev.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://api.trustev.com/v1.1/AuthenticationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" />
+  <xs:element name="CreateToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" minOccurs="0" name="request" nillable="true" type="q1:CreateTokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" minOccurs="0" name="CreateTokenResult" nillable="true" type="q2:CreateTokenResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

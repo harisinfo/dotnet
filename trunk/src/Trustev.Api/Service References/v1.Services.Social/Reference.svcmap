@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f211429-04cf-40fe-ac13-649a9b4c7f5c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://api.trustev.com/v1/SocialService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SocialService.xsd" MetadataType="Schema" ID="dfec03a1-cbd6-4d80-852d-0ac835d39568" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd5" />
+    <MetadataFile FileName="SocialService.wsdl" MetadataType="Wsdl" ID="047956d0-92e7-4861-8c15-6d0cb7c89e0a" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?wsdl" />
+    <MetadataFile FileName="SocialService1.xsd" MetadataType="Schema" ID="b94d2a74-0fca-454b-ab3f-ee1ae9ff3b92" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SocialService.disco" MetadataType="Disco" ID="13cf2c07-62a1-418b-9901-6ad40e001db5" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?disco" />
+    <MetadataFile FileName="SocialService1.wsdl" MetadataType="Wsdl" ID="86ee78bb-53db-47cd-92bb-1c22724c8997" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SocialService2.xsd" MetadataType="Schema" ID="4d5e9354-765c-41ab-98b0-aded911f58cd" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SocialService3.xsd" MetadataType="Schema" ID="fed13645-8fa2-4a7f-a3b0-46887c534cff" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SocialService4.xsd" MetadataType="Schema" ID="0935c567-dd8a-4536-8d31-b04e25e3ec8a" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SocialService5.xsd" MetadataType="Schema" ID="d20fec64-fb00-40e7-b82b-75e3c1e8dfda" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SocialService6.xsd" MetadataType="Schema" ID="f9b005cf-40a9-4e31-9b1d-d12d1b79fde3" SourceId="1" SourceUrl="https://api.trustev.com/v1/SocialService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

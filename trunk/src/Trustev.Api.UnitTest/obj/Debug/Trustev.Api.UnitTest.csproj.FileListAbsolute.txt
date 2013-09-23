@@ -1,0 +1,9 @@
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\obj\Debug\Trustev.Api.UnitTest.csprojResolveAssemblyReference.cache
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\Trustev.Api.UnitTest.dll
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\Trustev.Api.UnitTest.pdb
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\nunit.framework.dll
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\Trustev.Api.dll
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\Trustev.Api.pdb
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\nunit.framework.xml
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\obj\Debug\Trustev.Api.UnitTest.dll
+C:\projects\.Net library\dotnet\trunk\src\Trustev.Api.UnitTest\obj\Debug\Trustev.Api.UnitTest.pdb
