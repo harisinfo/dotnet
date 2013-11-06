@@ -20,18 +20,18 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://api.trustev.com/v1.1/SocialService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://127.0.0.1:444/v1.1/SocialService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SocialService.wsdl" MetadataType="Wsdl" ID="ca0382b9-e7ce-4d6a-b66c-bb93e6d31392" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="SocialService.xsd" MetadataType="Schema" ID="eb1e3787-3700-4bbb-804b-73a37a4b9a15" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?xsd=xsd1" />
-    <MetadataFile FileName="SocialService1.wsdl" MetadataType="Wsdl" ID="05256bec-d5d4-42b8-8177-8f760dc6559c" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?wsdl" />
-    <MetadataFile FileName="SocialService1.xsd" MetadataType="Schema" ID="50c9b406-643d-4982-8c28-be90c9912282" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?xsd=xsd3" />
-    <MetadataFile FileName="SocialService2.xsd" MetadataType="Schema" ID="172a57dd-235d-4618-96bc-c657a8ab3689" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?xsd=xsd5" />
-    <MetadataFile FileName="SocialService3.xsd" MetadataType="Schema" ID="00181da0-4bd4-4417-85d3-447e9b13ca2b" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?xsd=xsd2" />
-    <MetadataFile FileName="SocialService4.xsd" MetadataType="Schema" ID="89236ea1-cd0a-4bb9-a930-d0cb62549f3f" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?xsd=xsd0" />
-    <MetadataFile FileName="SocialService.disco" MetadataType="Disco" ID="7f3791a0-9fd3-49df-bc18-2ccccee00949" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?disco" />
-    <MetadataFile FileName="SocialService5.xsd" MetadataType="Schema" ID="ebd3cce5-ef4f-432a-b485-f372774ffe9a" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/SocialService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SocialService6.xsd" MetadataType="Schema" ID="48b7f1ff-4725-475a-82f9-9f52016af91a" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SocialService61.xsd" MetadataType="Schema" ID="e669b57e-509b-405a-9c28-edd4273752d4" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SocialService62.xsd" MetadataType="Schema" ID="069421d5-fd3e-4627-983d-4db611790ed6" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?xsd=xsd5" />
+    <MetadataFile FileName="SocialService63.xsd" MetadataType="Schema" ID="6f46edc1-d289-4e61-97b8-6e8dd397c64d" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SocialService2.wsdl" MetadataType="Wsdl" ID="fea0f730-b094-4c60-a4f4-b48ad4875592" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SocialService64.xsd" MetadataType="Schema" ID="ad18e845-2dfe-42e4-be2a-1abf1e2bc2e1" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SocialService65.xsd" MetadataType="Schema" ID="aeb31095-05c6-4546-a93a-baf07c56df1b" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SocialService1.disco" MetadataType="Disco" ID="ae8c6cab-dc64-4e87-a031-bd92bf5360c0" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?disco" />
+    <MetadataFile FileName="SocialService21.wsdl" MetadataType="Wsdl" ID="9798f252-b9af-429f-9dca-c1aa52c515aa" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/SocialService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

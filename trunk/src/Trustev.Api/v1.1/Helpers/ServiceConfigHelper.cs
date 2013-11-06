@@ -20,7 +20,7 @@ namespace Trustev.Api.v1_1.Helpers
 
         private ServiceConfigHelper()
         {
-            TrustevApiBaseAddress = "https://api.trustev.com/v1.1/";
+            TrustevApiBaseAddress = "https://127.0.0.1:444/v1.1/";
         }
 
         public static ServiceConfigHelper Instance

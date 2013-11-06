@@ -8,10 +8,10 @@ using Trustev.Api.v1_1.Services.Transaction;
 using Trustev.Api.v1_1.Helpers;
 using Trustev.Api.v1_1;
 
-namespace Social.Verify.UnitTest.API.v1_1
+namespace Trustev.Api.UnitTest.v1_1
 {
     [TestFixture]
-    public class TransactionServiceTest
+    public class TransactionTest
     {
         private String transactionNumber;
 

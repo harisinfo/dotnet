@@ -17,27 +17,27 @@ namespace Trustev.Api.v1_1
         }
 
 
-        public void UpdateTransaction(UpdateTransactionRequest request)
+        public void UpdateTransaction(UpdateTransactionRequest request, String transactionNumber)
         {
 
             TransactionServiceClient service = (TransactionServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Transaction);
 
-            service.UpdateTransaction(request, "999");
+            service.UpdateTransaction(request, transactionNumber);
 
         }
 
-        public void AddTransactionBIN(AddTransactionBINRequest request)
+        public void AddTransactionBIN(AddTransactionBINRequest request, String transactionNumber)
         {
             TransactionServiceClient service = (TransactionServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Transaction);
 
-            service.AddTransactionBIN(request, "999");
+            service.AddTransactionBIN(request, transactionNumber);
         }
 
-        public void AddTransactionStatus(AddTransactionStatusRequest request)
+        public void AddTransactionStatus(AddTransactionStatusRequest request, String transactionNumber)
         {
             TransactionServiceClient service = (TransactionServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Transaction);
 
-            service.AddTransactionStatus(request, "999");
+            service.AddTransactionStatus(request, transactionNumber);
         }
 
        

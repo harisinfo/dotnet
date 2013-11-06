@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Runtime.Serialization;
 using System.Text;
 using NUnit.Framework;
@@ -10,7 +13,6 @@ using Trustev.Api.v1_1.Services.Authentication;
 
 namespace Trustev.Api.UnitTest.v1_1
 {
-
     [TestFixture]
     public class AuthenticateTest
     {
@@ -18,23 +20,33 @@ namespace Trustev.Api.UnitTest.v1_1
         private string _password;
         private string _sharedsecret;
         private DateTime _timestamp;
+        private Authenticate service;
 
         [SetUp]
         public void Setup()
         {
+            ServicePointManager.ServerCertificateValidationCallback +=
+
+               delegate(
+                   Object sender1,
+                   X509Certificate certificate,
+                   X509Chain chain,
+                   SslPolicyErrors sslPolicyErrors)
+               {
+                   return true;
+               };
 
             _username = "testtrustev";
             _password = "6af92077e0f325a0df39f694cfecc113";
             _sharedsecret = "5160574c3159333093f1c7bf92756366";
             _timestamp = DateTime.UtcNow;
 
+            service = new Authenticate(_username, _password, _sharedsecret);
         }
 
         [Test]
         public void GetTokenTest()
         {
-
-            Authenticate service = new Authenticate(_username, _password, _sharedsecret);
             CreateTokenResponse response = service.GetToken();
 
             Trace.WriteLine(String.Format("Response Code: {0}", response.Code));
@@ -50,10 +62,8 @@ namespace Trustev.Api.UnitTest.v1_1
         [Test]
         public void GetToken401Test()
         {
-
-           
-                Authenticate service = new Authenticate("fakeUsername", _password, _sharedsecret);
-                CreateTokenResponse response = service.GetToken();
+                Authenticate serviceFail = new Authenticate("fakeUsername", _password, _sharedsecret);
+                CreateTokenResponse response = serviceFail.GetToken();
 
                 Debug.Write(String.Format("Response Code: {0}", response.Code));
                 Debug.Write(String.Format("Response Message: {0}", response.Message));
@@ -61,7 +71,13 @@ namespace Trustev.Api.UnitTest.v1_1
 
 
                 Assert.AreEqual(response.Code, 401);
+        }
 
+        [Test]
+        public void AuthenticateUserPass()
+        {
+            AuthenticateUserResponse res = service.AuthenticateUser(new AuthenticateUserRequest() { UserName = "ChrisKennedy", Password = "cJR9Aetx" });
+            Assert.NotNull(res);
         }
 
 

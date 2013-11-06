@@ -4,3 +4,8 @@ C:\projects\.Net library\dotnet\trunk\src\Trustev.Api\bin\Debug\Trustev.Api.pdb
 C:\projects\.Net library\dotnet\trunk\src\Trustev.Api\obj\Debug\Trustev.Api.dll
 C:\projects\.Net library\dotnet\trunk\src\Trustev.Api\obj\Debug\Trustev.Api.pdb
 C:\projects\.Net library\dotnet\trunk\src\Trustev.Api\obj\Debug\Trustev.Api.csprojResolveAssemblyReference.cache
+C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\bin\Debug\Trustev.Api.dll
+C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\bin\Debug\Trustev.Api.pdb
+C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\obj\Debug\Trustev.Api.dll
+C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\obj\Debug\Trustev.Api.pdb
+C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\bin\Debug\Trustev.Api.dll.config

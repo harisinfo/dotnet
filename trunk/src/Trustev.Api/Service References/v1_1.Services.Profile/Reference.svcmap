@@ -20,19 +20,19 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://api.trustev.com/v1.1/ProfileService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://127.0.0.1:444/v1.1/ProfileService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProfileService.xsd" MetadataType="Schema" ID="17416703-8d95-416f-a01e-fcd13fc8836e" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ProfileService.disco" MetadataType="Disco" ID="d5f8c95f-aef2-44be-a3c2-d51bb48208f7" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?disco" />
-    <MetadataFile FileName="ProfileService1.xsd" MetadataType="Schema" ID="c84f324b-6734-4f5a-ada9-6afde0b0fe96" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd4" />
-    <MetadataFile FileName="ProfileService2.xsd" MetadataType="Schema" ID="aaa503b6-9b46-4e7a-9ee8-28152217203e" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ProfileService3.xsd" MetadataType="Schema" ID="fb6c0006-37f7-4bc4-9602-611e5c48a285" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd5" />
-    <MetadataFile FileName="ProfileService4.xsd" MetadataType="Schema" ID="810ffa5c-39d4-4b8c-9abe-dd25673a7781" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd6" />
-    <MetadataFile FileName="ProfileService.wsdl" MetadataType="Wsdl" ID="8f624e27-e026-4ce2-8ce2-25a7075a08a7" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="ProfileService1.wsdl" MetadataType="Wsdl" ID="376139c5-7379-4979-b3e0-165101090d30" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?wsdl" />
-    <MetadataFile FileName="ProfileService5.xsd" MetadataType="Schema" ID="bf545434-41e1-4704-a949-4f9bc9bf3316" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd1" />
-    <MetadataFile FileName="ProfileService6.xsd" MetadataType="Schema" ID="6be631c9-bb6c-4d9f-8180-f55f5606723c" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/ProfileService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProfileService2.wsdl" MetadataType="Wsdl" ID="cf83b7ec-c7bd-4c9c-8ea3-010ca14fb75b" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?wsdl" />
+    <MetadataFile FileName="ProfileService1.disco" MetadataType="Disco" ID="f75e4bf0-e3bd-41d5-bfe7-b6c8c2f367b0" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?disco" />
+    <MetadataFile FileName="ProfileService21.wsdl" MetadataType="Wsdl" ID="843456ed-9ad3-4266-8af5-e41801832ee3" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProfileService7.xsd" MetadataType="Schema" ID="d9bf6404-c451-4577-98f8-b77942d939be" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProfileService71.xsd" MetadataType="Schema" ID="d6b9b09d-ca87-4357-8395-e1e5f4a945cd" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProfileService72.xsd" MetadataType="Schema" ID="bf663b4f-b7db-4301-9c27-1583c084ee07" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProfileService73.xsd" MetadataType="Schema" ID="b34e4ba8-3d30-4f24-aa66-e60c41b8d54d" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProfileService74.xsd" MetadataType="Schema" ID="f0c7df77-43ea-4ca9-8e0d-dd8f556fadaa" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProfileService75.xsd" MetadataType="Schema" ID="a90ec190-018d-4eff-b39d-1732d555300d" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ProfileService76.xsd" MetadataType="Schema" ID="19aaf88a-55e1-4d4b-a3be-32f2dad3a0d3" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd6" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

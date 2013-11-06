@@ -17,18 +17,18 @@ namespace Trustev.Api.v1_1
             service.AddProfile(request);
         }
 
-        public void UpdateProfile(UpdateProfileRequest request)
+        public void UpdateProfile(UpdateProfileRequest request, ConstantsSocialNetworkType type, String id)
         {
             SocialServiceClient service = (SocialServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Social);
 
 
-            service.UpdateProfile(request, "0", "222");
+            service.UpdateProfile(request, type.ToString(), id);
         }
 
-        public void DeleteProfile()
+        public void DeleteProfile(ConstantsSocialNetworkType type, String id)
         {
             SocialServiceClient service = (SocialServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Social);
-            service.DeleteProfile("0", "999");
+            service.DeleteProfile(type.ToString(), id);
         }
 
     }

@@ -20,20 +20,20 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://api.trustev.com/v1.1/TransactionService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://127.0.0.1:444/v1.1/TransactionService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TransactionService.xsd" MetadataType="Schema" ID="37a5073d-4e11-4486-953a-c725057c25e0" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd1" />
-    <MetadataFile FileName="TransactionService.wsdl" MetadataType="Wsdl" ID="304475b0-6b16-4bb9-bf13-2fc215d0ccbd" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="TransactionService1.wsdl" MetadataType="Wsdl" ID="4502ee72-7d3b-47fc-a685-e53230b2281c" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?wsdl" />
-    <MetadataFile FileName="TransactionService1.xsd" MetadataType="Schema" ID="eb792fd7-d37c-49c9-a8c8-5c6cf2cf6993" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd2" />
-    <MetadataFile FileName="TransactionService.disco" MetadataType="Disco" ID="3527adce-e65f-4ee3-9980-a635a16c52f2" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?disco" />
-    <MetadataFile FileName="TransactionService2.xsd" MetadataType="Schema" ID="101aab4e-c123-432a-87c7-8fa84f6bde52" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd5" />
-    <MetadataFile FileName="TransactionService3.xsd" MetadataType="Schema" ID="543b7ec7-19ba-403f-98d6-9b2f0d058d7c" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd0" />
-    <MetadataFile FileName="TransactionService4.xsd" MetadataType="Schema" ID="cfb0de67-fe0e-4096-8e9d-9dd07a163972" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd4" />
-    <MetadataFile FileName="TransactionService5.xsd" MetadataType="Schema" ID="5e848dae-d78a-492f-8b67-dfbf65004e8a" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd3" />
-    <MetadataFile FileName="TransactionService6.xsd" MetadataType="Schema" ID="56d3c843-3c89-49d1-a158-fc5664506a17" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd6" />
-    <MetadataFile FileName="TransactionService7.xsd" MetadataType="Schema" ID="69f0e8b7-936d-4025-94e2-775c9f342e84" SourceId="1" SourceUrl="https://api.trustev.com/v1.1/TransactionService.svc?xsd=xsd7" />
+    <MetadataFile FileName="TransactionService8.xsd" MetadataType="Schema" ID="b6242285-bdb8-4845-920a-4e8a5d84d121" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TransactionService81.xsd" MetadataType="Schema" ID="0d3777a2-6017-45ea-9ae3-240728e88270" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TransactionService2.wsdl" MetadataType="Wsdl" ID="747c0e06-38d3-4d61-998a-adf3c775462e" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?wsdl" />
+    <MetadataFile FileName="TransactionService1.disco" MetadataType="Disco" ID="7b4598e5-2c02-419a-a3fa-8d543f25ec61" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?disco" />
+    <MetadataFile FileName="TransactionService82.xsd" MetadataType="Schema" ID="bc9bffb8-4e8b-4713-b903-2cd3407cb710" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd4" />
+    <MetadataFile FileName="TransactionService83.xsd" MetadataType="Schema" ID="16d5b45e-6f83-4fbd-a3e3-82b40fd9ee91" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd6" />
+    <MetadataFile FileName="TransactionService84.xsd" MetadataType="Schema" ID="f178e7fb-36e8-4c40-8166-a84b254cea79" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="TransactionService85.xsd" MetadataType="Schema" ID="bf93178c-5e22-4022-9494-c1026d0e67ab" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd5" />
+    <MetadataFile FileName="TransactionService21.wsdl" MetadataType="Wsdl" ID="db32ecf7-f8ed-412d-aedc-84274c26ceba" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TransactionService86.xsd" MetadataType="Schema" ID="ab233506-f27a-4873-b696-45b5d03fed66" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd7" />
+    <MetadataFile FileName="TransactionService87.xsd" MetadataType="Schema" ID="027720da-741d-4a3b-a5e9-7b71a5647cf3" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/TransactionService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

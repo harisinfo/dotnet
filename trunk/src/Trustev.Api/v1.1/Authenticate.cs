@@ -4,71 +4,74 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Net.Security;
+using System.Diagnostics;
+
+using Trustev.Api.v1_1.Behaviours;
 using Trustev.Api.v1_1.Helpers;
 using Trustev.Api.v1_1.Services.Authentication;
-using System.Diagnostics;
 
 namespace Trustev.Api.v1_1
 {
     public class Authenticate
     {
-        public String UserName { get; set; }
-        private String Password { get; set; }
-        private String Secret { get; set; }
-        private DateTime Timestamp { get; set; }
-        private String _token;
-        public String TransactionNumber { get; set; }
-        public String Token
-        {
-            get
-            {
-               
-                return _token;
-            }
-            set
-            {
-                _token = value;
-            }
-        }
-        public DateTime TokenExpiry { get; set; }
+        AuthenticationServiceClient service;
+        AuthenticationServiceClient serviceNoAuth;        
 
-        protected Authenticate()
+        public Authenticate()
         {
+            XAuthBehaviour behaviour = new XAuthBehaviour();
+
+            service = (AuthenticationServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Authentication);
+            serviceNoAuth = (AuthenticationServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Authentication);
+
+            service.Endpoint.Behaviors.Add(behaviour);
         }
 
         public Authenticate(String username, String password, String secret)
         {
-            UserName = username;
-            Password = password;
-            Secret = secret;
-            Timestamp = DateTime.UtcNow;
+            XAuthBehaviour behaviour = new XAuthBehaviour();
+
+            service = (AuthenticationServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Authentication);
+            serviceNoAuth = (AuthenticationServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Authentication);
+
+            service.Endpoint.Behaviors.Add(behaviour);
+
+            AuthenticationToken.Instance.UserName = username;
+            AuthenticationToken.Instance.Password = password;
+            AuthenticationToken.Instance.Secret = secret;
+            AuthenticationToken.Instance.Timestamp = DateTime.UtcNow;
         }
 
         public CreateTokenResponse GetToken()
         {
-            AuthenticationServiceClient service = (AuthenticationServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Authentication);
+            string passwordHash = AuthenticationHelper.Instance.PasswordHashHelper(AuthenticationToken.Instance.Password, AuthenticationToken.Instance.Secret, AuthenticationToken.Instance.Timestamp);
+            string sha256Hash = AuthenticationHelper.Instance.Sha256HashHelper(AuthenticationToken.Instance.UserName, AuthenticationToken.Instance.Secret, AuthenticationToken.Instance.Timestamp);
 
-            string passwordHash = AuthenticationHelper.Instance.PasswordHashHelper(Password, Secret, Timestamp);
-            string sha256Hash = AuthenticationHelper.Instance.Sha256HashHelper(UserName, Secret, Timestamp);
-
-            CreateTokenResponse response = service.CreateToken(new CreateTokenRequest
+            CreateTokenResponse response = serviceNoAuth.CreateToken(new CreateTokenRequest
             {
-                UserName = UserName,
+                UserName = AuthenticationToken.Instance.UserName,
                 Password = passwordHash,
                 Sha256Hash = sha256Hash,
-                Timestamp = Timestamp
+                Timestamp = AuthenticationToken.Instance.Timestamp
             });
 
-            Token = response.Token.APIToken;
-            TokenExpiry = response.Token.ExpireAt;
+            AuthenticationToken.Instance.Token = response.Token.APIToken;
+            AuthenticationToken.Instance.TokenExpiry = response.Token.ExpireAt;
 
             return response;
         }
 
- 
+        public AuthenticateUserResponse AuthenticateUser(AuthenticateUserRequest request)
+        {
+            return service.AuthenticateUser(request);
+        }
 
+        public void ResetUserPassword(ResetUserPasswordRequest request)
+        {
+            service.ResetUserPassword(request);
         }
     }
+}
 
 
 

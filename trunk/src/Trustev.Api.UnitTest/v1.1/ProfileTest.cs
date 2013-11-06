@@ -12,7 +12,7 @@ namespace Trustev.Api.UnitTest.v1_1
 {
 
     [TestFixture]
-    public class AuthenticateTest
+    public class ProfileTest
     {
 
         [SetUp]
