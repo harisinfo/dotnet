@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="https://api.trustev.com" elementFormDefault="qualified" targetNamespace="https://api.trustev.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User.Password" />
+  <xs:element name="CreateToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" minOccurs="0" name="request" nillable="true" type="q1:CreateTokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" minOccurs="0" name="CreateTokenResult" nillable="true" type="q2:CreateTokenResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User" minOccurs="0" name="request" nillable="true" type="q3:AuthenticateUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User" minOccurs="0" name="AuthenticateUserResult" nillable="true" type="q4:AuthenticateUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User.Password" minOccurs="0" name="request" nillable="true" type="q5:ResetUserPasswordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

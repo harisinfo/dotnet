@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User.Password" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User.Password" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
+  <xs:complexType name="ResetUserPasswordRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="DeliveryMethod" nillable="true" type="q1:ArrayOfConstants.CommunicationType" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResetUserPasswordRequest" nillable="true" type="tns:ResetUserPasswordRequest" />
+</xs:schema>

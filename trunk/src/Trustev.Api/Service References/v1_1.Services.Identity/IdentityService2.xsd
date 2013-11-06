@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Constants.AddressType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Standard" />
+      <xs:enumeration value="Billing" />
+      <xs:enumeration value="Delivery" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.AddressType" nillable="true" type="tns:Constants.AddressType" />
+</xs:schema>

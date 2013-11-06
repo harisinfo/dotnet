@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Constants.CredentialType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Test" />
+      <xs:enumeration value="Live" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.CredentialType" nillable="true" type="tns:Constants.CredentialType" />
+  <xs:complexType name="ArrayOfConstants.CommunicationType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Constants.CommunicationType" type="tns:Constants.CommunicationType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConstants.CommunicationType" nillable="true" type="tns:ArrayOfConstants.CommunicationType" />
+  <xs:simpleType name="Constants.CommunicationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Email" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.CommunicationType" nillable="true" type="tns:Constants.CommunicationType" />
+</xs:schema>

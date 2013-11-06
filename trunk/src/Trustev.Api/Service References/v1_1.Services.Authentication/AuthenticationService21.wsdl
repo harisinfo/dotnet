@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://api.trustev.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthenticationService" targetNamespace="https://api.trustev.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="https://127.0.0.1:444/v1.1/AuthenticationService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://api.trustev.com/Imports">
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd0" namespace="https://api.trustev.com" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/AuthenticationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Authentication.User.Password" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthenticationService_CreateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateToken" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_CreateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ResetUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ResetUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthenticationService">
+    <wsdl:operation name="CreateToken">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IAuthenticationService/CreateToken" message="tns:IAuthenticationService_CreateToken_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IAuthenticationService/CreateTokenResponse" message="tns:IAuthenticationService_CreateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IAuthenticationService/AuthenticateUser" message="tns:IAuthenticationService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IAuthenticationService/AuthenticateUserResponse" message="tns:IAuthenticationService_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetUserPassword">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IAuthenticationService/ResetUserPassword" message="tns:IAuthenticationService_ResetUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IAuthenticationService/ResetUserPasswordResponse" message="tns:IAuthenticationService_ResetUserPassword_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="AuthenticationService">
+    <wsdl:port name="BasicHttpBinding_IAuthenticationService" binding="i0:BasicHttpBinding_IAuthenticationService">
+      <soap:address location="https://127.0.0.1:444/v1.1/AuthenticationService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

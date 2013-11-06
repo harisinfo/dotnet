@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Constants.TrustevProfileScoreParameter">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Overall" />
+      <xs:enumeration value="Billing" />
+      <xs:enumeration value="Delivery" />
+      <xs:enumeration value="Input" />
+      <xs:enumeration value="Domain" />
+      <xs:enumeration value="Address" />
+      <xs:enumeration value="IP" />
+      <xs:enumeration value="Proxy" />
+      <xs:enumeration value="VPN" />
+      <xs:enumeration value="Value" />
+      <xs:enumeration value="Velocity" />
+      <xs:enumeration value="Legitimacy" />
+      <xs:enumeration value="Pattern" />
+      <xs:enumeration value="Hustle" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.TrustevProfileScoreParameter" nillable="true" type="tns:Constants.TrustevProfileScoreParameter" />
+  <xs:simpleType name="Constants.TrustevProfileScoreSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Address" />
+      <xs:enumeration value="Behaviour" />
+      <xs:enumeration value="Device" />
+      <xs:enumeration value="Email" />
+      <xs:enumeration value="Facebook" />
+      <xs:enumeration value="IP" />
+      <xs:enumeration value="Transaction" />
+      <xs:enumeration value="Trustev" />
+      <xs:enumeration value="Velocity" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.TrustevProfileScoreSource" nillable="true" type="tns:Constants.TrustevProfileScoreSource" />
+</xs:schema>

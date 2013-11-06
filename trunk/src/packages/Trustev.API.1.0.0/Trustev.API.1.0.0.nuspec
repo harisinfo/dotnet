@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Trustev.API</id>
+    <version>1.0.0</version>
+    <title>Trustev API .NET Library</title>
+    <authors>Trustev</authors>
+    <owners>Trustev</owners>
+    <projectUrl>http://www.trustev.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My package description.</description>
+  </metadata>
+</package>
