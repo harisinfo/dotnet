@@ -13,7 +13,8 @@ namespace Trustev.Api.v1_1
             Authentication,
             Social,
             Transaction,
-            Profile
+            Profile,
+            Identity
         }
 
     }

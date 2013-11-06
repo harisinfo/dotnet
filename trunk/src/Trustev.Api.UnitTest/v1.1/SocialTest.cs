@@ -24,14 +24,11 @@ namespace Trustev.Api.UnitTest.v1_1
         private string _secret;
 
         [SetUp]
-
         public void Setup()
         {
-
-        _username = "test-trustev";
-        _password = "7c30aa486650475f889a8bae99deeb0f";
-        _sharedsecret = "43f9af4d1bf64cb6bae82ff505b66b23";
-
+            _username = "testtrustev";
+            _password = "6af92077e0f325a0df39f694cfecc113";
+            _sharedsecret = "5160574c3159333093f1c7bf92756366";
         }
 
         [Test]

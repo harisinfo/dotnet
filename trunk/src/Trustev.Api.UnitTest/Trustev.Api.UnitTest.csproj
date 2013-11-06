@@ -50,6 +50,7 @@
     <Compile Include="v1.1\AuthenticateTest.cs" />
     <Compile Include="v1.1\Helpers\AuthenticationHelperTest.cs" />
     <Compile Include="v1.1\Helpers\ServiceConfigHelperTest.cs" />
+    <Compile Include="v1.1\IdentityTest.cs" />
     <Compile Include="v1.1\ProfileTest.cs" />
     <Compile Include="v1.1\SocialTest.cs" />
     <Compile Include="v1.1\TransactionTest.cs" />

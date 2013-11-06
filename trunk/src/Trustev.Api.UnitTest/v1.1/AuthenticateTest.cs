@@ -26,7 +26,6 @@ namespace Trustev.Api.UnitTest.v1_1
         public void Setup()
         {
             ServicePointManager.ServerCertificateValidationCallback +=
-
                delegate(
                    Object sender1,
                    X509Certificate certificate,
@@ -80,6 +79,13 @@ namespace Trustev.Api.UnitTest.v1_1
             Assert.NotNull(res);
         }
 
+        [Test]
+        public void ResetUserPasswordPass()
+        {
+            List<ConstantsCommunicationType> type = new List<ConstantsCommunicationType>();
+            type.Add(ConstantsCommunicationType.Email);
 
+            service.ResetUserPassword(new ResetUserPasswordRequest() { Email = "chris.kennedy@trustev.com", DeliveryMethod = type });
+        }
     }
 }

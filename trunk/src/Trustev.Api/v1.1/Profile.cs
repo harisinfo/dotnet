@@ -9,11 +9,5 @@ namespace Trustev.Api.v1_1
 {
 	public class Profile
 	{
-
-        public void GetProfile(GetProfileResponse response)
-        {
-            ProfileServiceClient service = (ProfileServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Transaction);
-            service.GetProfile("1", "999", "10");
-        }
 	}
 }

@@ -75,6 +75,7 @@
     <Compile Include="v1.1\Constants.cs" />
     <Compile Include="v1.1\Helpers\AuthenticationHelper.cs" />
     <Compile Include="v1.1\Helpers\ServiceConfigHelper.cs" />
+    <Compile Include="v1.1\Identity.cs" />
     <Compile Include="v1.1\Inspectors\XAuthInspector.cs" />
     <Compile Include="v1.1\Profile.cs" />
     <Compile Include="v1.1\Social.cs" />
