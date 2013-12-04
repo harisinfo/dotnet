@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="AddressVerificationRequest">
-    <xs:sequence />
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail.Common" />
+  <xs:complexType name="CreateRetailProfileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceLatitude" type="xs:double" />
+      <xs:element minOccurs="0" name="DeviceLongtitude" type="xs:double" />
+      <xs:element minOccurs="0" name="IdentityId" type="ser:guid" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="Reason" type="q1:Constants.RetailDecisionReason" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:element name="AddressVerificationRequest" nillable="true" type="tns:AddressVerificationRequest" />
+  <xs:element name="CreateRetailProfileRequest" nillable="true" type="tns:CreateRetailProfileRequest" />
+  <xs:complexType name="CreateRetailProfileResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" base="q2:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RetailProfileId" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CreateRetailProfileResponse" nillable="true" type="tns:CreateRetailProfileResponse" />
+  <xs:complexType name="GetRetailProfileResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" base="q3:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="AgeRange" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="Decision" type="q4:Constants.DecisionCode" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail.Common" minOccurs="0" name="Email" nillable="true" type="q5:Email" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail.Common" minOccurs="0" name="Locations" nillable="true" type="q6:ArrayOfLocation" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail.Common" minOccurs="0" name="Phone" nillable="true" type="q7:Phone" />
+          <xs:element minOccurs="0" name="ReferenceNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRetailProfileResponse" nillable="true" type="tns:GetRetailProfileResponse" />
 </xs:schema>

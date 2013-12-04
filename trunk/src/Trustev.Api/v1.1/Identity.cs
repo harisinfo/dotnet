@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 
 using Trustev.Api.v1_1.Behaviours;
 using Trustev.Api.v1_1.Helpers;
+using Trustev.Api.v1_1.Models;
 using Trustev.Api.v1_1.Services.Identity;
 
 namespace Trustev.Api.v1_1
@@ -14,6 +15,9 @@ namespace Trustev.Api.v1_1
     {
         private IdentityServiceClient service;
 
+        /// <summary>
+        /// Create a new instance of the Identity class
+        /// </summary>
         public Identity()
         {
             XAuthBehaviour behaviour = new XAuthBehaviour();
@@ -21,6 +25,9 @@ namespace Trustev.Api.v1_1
             service.Endpoint.Behaviors.Add(behaviour);
         }
 
+        /// <summary>
+        /// Update an existing customer
+        /// </summary>
         public void UpdateCustomer(UpdateCustomerRequest request, Guid id)
         {
             service.UpdateCustomer(request, id.ToString());

@@ -7,6 +7,7 @@ using System.Text;
 using Trustev.Api.v1_1.Services.Authentication;
 using Trustev.Api.v1_1.Services.Identity;
 using Trustev.Api.v1_1.Services.Social;
+using Trustev.Api.v1_1.Models;
 using Trustev.Api.v1_1.Services.Transaction;
 
 namespace Trustev.Api.v1_1.Helpers

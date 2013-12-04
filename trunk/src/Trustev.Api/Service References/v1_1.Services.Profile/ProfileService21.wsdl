@@ -52,6 +52,24 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CreateRetailProfileByIdentity">
+      <soap:operation soapAction="https://api.trustev.com/IProfileService/CreateRetailProfileByIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRetailProfile">
+      <soap:operation soapAction="https://api.trustev.com/IProfileService/GetRetailProfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="VerifyAddress">
       <soap:operation soapAction="https://api.trustev.com/IProfileService/VerifyAddress" style="document" />
       <wsdl:input>

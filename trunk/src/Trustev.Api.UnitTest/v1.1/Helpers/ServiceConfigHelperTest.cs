@@ -18,7 +18,7 @@ namespace Trustev.Api.UnitTest.v1_1.Helpers
         [Test]
         public void GetAuthenticationServiceNotNullPass()
         {
-            object response = ServiceConfigHelper.Instance.GetService(Api.v1_1.Constants.ServiceType.Authentication);
+            object response = ServiceConfigHelper.Instance.GetService(Api.v1_1.Models.Constants.ServiceType.Authentication);
             
             Assert.IsNotNull(response);
         }
@@ -26,7 +26,7 @@ namespace Trustev.Api.UnitTest.v1_1.Helpers
         [Test]
         public void GetAuthenticationServiceTypePass()
         {
-            object response = ServiceConfigHelper.Instance.GetService(Api.v1_1.Constants.ServiceType.Authentication);
+            object response = ServiceConfigHelper.Instance.GetService(Api.v1_1.Models.Constants.ServiceType.Authentication);
 
             Assert.IsInstanceOf<AuthenticationServiceClient>(response);
         }

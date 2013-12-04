@@ -15,6 +15,141 @@ namespace Trustev.Api.v1_1.Services.Identity {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Response", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Ba" +
+        "se")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Trustev.Api.v1_1.Services.Identity.GetIdentityResponse))]
+    public partial class Response : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime TimestampField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Code {
+            get {
+                return this.CodeField;
+            }
+            set {
+                if ((this.CodeField.Equals(value) != true)) {
+                    this.CodeField = value;
+                    this.RaisePropertyChanged("Code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Timestamp {
+            get {
+                return this.TimestampField;
+            }
+            set {
+                if ((this.TimestampField.Equals(value) != true)) {
+                    this.TimestampField = value;
+                    this.RaisePropertyChanged("Timestamp");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetIdentityResponse", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Id" +
+        "entity")]
+    [System.SerializableAttribute()]
+    public partial class GetIdentityResponse : Trustev.Api.v1_1.Services.Identity.Response {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime CreatedAtField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Active {
+            get {
+                return this.ActiveField;
+            }
+            set {
+                if ((this.ActiveField.Equals(value) != true)) {
+                    this.ActiveField = value;
+                    this.RaisePropertyChanged("Active");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime CreatedAt {
+            get {
+                return this.CreatedAtField;
+            }
+            set {
+                if ((this.CreatedAtField.Equals(value) != true)) {
+                    this.CreatedAtField = value;
+                    this.RaisePropertyChanged("CreatedAt");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="UpdateCustomerRequest", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Cu" +
         "stomer")]
     [System.SerializableAttribute()]
@@ -377,6 +512,18 @@ namespace Trustev.Api.v1_1.Services.Identity {
     [System.ServiceModel.ServiceContractAttribute(Namespace="https://api.trustev.com", ConfigurationName="v1_1.Services.Identity.IIdentityService")]
     public interface IIdentityService {
         
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IIdentityService/GetIdentity", ReplyAction="https://api.trustev.com/IIdentityService/GetIdentityResponse")]
+        Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentity(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IIdentityService/GetIdentityFromSocial", ReplyAction="https://api.trustev.com/IIdentityService/GetIdentityFromSocialResponse")]
+        Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentityFromSocial(string id, string type);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IIdentityService/GetIdentityFromEmail", ReplyAction="https://api.trustev.com/IIdentityService/GetIdentityFromEmailResponse")]
+        Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentityFromEmail(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IIdentityService/GetIdentityFromPhone", ReplyAction="https://api.trustev.com/IIdentityService/GetIdentityFromPhoneResponse")]
+        Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentityFromPhone(string phone);
+        
         [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IIdentityService/UpdateCustomer", ReplyAction="https://api.trustev.com/IIdentityService/UpdateCustomerResponse")]
         void UpdateCustomer(Trustev.Api.v1_1.Services.Identity.UpdateCustomerRequest request, string id);
     }
@@ -406,6 +553,22 @@ namespace Trustev.Api.v1_1.Services.Identity {
         
         public IdentityServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentity(string id) {
+            return base.Channel.GetIdentity(id);
+        }
+        
+        public Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentityFromSocial(string id, string type) {
+            return base.Channel.GetIdentityFromSocial(id, type);
+        }
+        
+        public Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentityFromEmail(string email) {
+            return base.Channel.GetIdentityFromEmail(email);
+        }
+        
+        public Trustev.Api.v1_1.Services.Identity.GetIdentityResponse GetIdentityFromPhone(string phone) {
+            return base.Channel.GetIdentityFromPhone(phone);
         }
         
         public void UpdateCustomer(Trustev.Api.v1_1.Services.Identity.UpdateCustomerRequest request, string id) {

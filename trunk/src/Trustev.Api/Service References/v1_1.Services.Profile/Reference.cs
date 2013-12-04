@@ -19,6 +19,8 @@ namespace Trustev.Api.v1_1.Services.Profile {
         "se")]
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Trustev.Api.v1_1.Services.Profile.AddressVerificationResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Trustev.Api.v1_1.Services.Profile.CreateRetailProfileResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(Trustev.Api.v1_1.Services.Profile.GetRetailProfileResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(Trustev.Api.v1_1.Services.Profile.GetProfileResponse))]
     public partial class Response : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -103,6 +105,182 @@ namespace Trustev.Api.v1_1.Services.Profile {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CreateRetailProfileResponse", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
+        "ofile.Retail")]
+    [System.SerializableAttribute()]
+    public partial class CreateRetailProfileResponse : Trustev.Api.v1_1.Services.Profile.Response {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid RetailProfileIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid RetailProfileId {
+            get {
+                return this.RetailProfileIdField;
+            }
+            set {
+                if ((this.RetailProfileIdField.Equals(value) != true)) {
+                    this.RetailProfileIdField = value;
+                    this.RaisePropertyChanged("RetailProfileId");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRetailProfileResponse", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
+        "ofile.Retail")]
+    [System.SerializableAttribute()]
+    public partial class GetRetailProfileResponse : Trustev.Api.v1_1.Services.Profile.Response {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AgeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AgeRangeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Trustev.Api.v1_1.Services.Profile.ConstantsDecisionCode DecisionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Trustev.Api.v1_1.Services.Profile.Email EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Collections.Generic.List<Trustev.Api.v1_1.Services.Profile.Location> LocationsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Trustev.Api.v1_1.Services.Profile.Phone PhoneField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ReferenceNumberField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Age {
+            get {
+                return this.AgeField;
+            }
+            set {
+                if ((this.AgeField.Equals(value) != true)) {
+                    this.AgeField = value;
+                    this.RaisePropertyChanged("Age");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AgeRange {
+            get {
+                return this.AgeRangeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AgeRangeField, value) != true)) {
+                    this.AgeRangeField = value;
+                    this.RaisePropertyChanged("AgeRange");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Trustev.Api.v1_1.Services.Profile.ConstantsDecisionCode Decision {
+            get {
+                return this.DecisionField;
+            }
+            set {
+                if ((this.DecisionField.Equals(value) != true)) {
+                    this.DecisionField = value;
+                    this.RaisePropertyChanged("Decision");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Trustev.Api.v1_1.Services.Profile.Email Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Collections.Generic.List<Trustev.Api.v1_1.Services.Profile.Location> Locations {
+            get {
+                return this.LocationsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationsField, value) != true)) {
+                    this.LocationsField = value;
+                    this.RaisePropertyChanged("Locations");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Trustev.Api.v1_1.Services.Profile.Phone Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ReferenceNumber {
+            get {
+                return this.ReferenceNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ReferenceNumberField, value) != true)) {
+                    this.ReferenceNumberField = value;
+                    this.RaisePropertyChanged("ReferenceNumber");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetProfileResponse", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
         "ofile.Responses")]
     [System.SerializableAttribute()]
@@ -169,6 +347,236 @@ namespace Trustev.Api.v1_1.Services.Profile {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Email", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
+        "ofile.Retail.Common")]
+    [System.SerializableAttribute()]
+    public partial class Email : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool VerifiedField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Verified {
+            get {
+                return this.VerifiedField;
+            }
+            set {
+                if ((this.VerifiedField.Equals(value) != true)) {
+                    this.VerifiedField = value;
+                    this.RaisePropertyChanged("Verified");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Phone", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
+        "ofile.Retail.Common")]
+    [System.SerializableAttribute()]
+    public partial class Phone : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneCountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneNumberField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneCountry {
+            get {
+                return this.PhoneCountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneCountryField, value) != true)) {
+                    this.PhoneCountryField = value;
+                    this.RaisePropertyChanged("PhoneCountry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneNumber {
+            get {
+                return this.PhoneNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneNumberField, value) != true)) {
+                    this.PhoneNumberField = value;
+                    this.RaisePropertyChanged("PhoneNumber");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Constants.DecisionCode", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types")]
+    public enum ConstantsDecisionCode : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        FAIL = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        FLAG = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        PASS = 2,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
+        "ofile.Retail.Common")]
+    [System.SerializableAttribute()]
+    public partial class Location : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double DistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Trustev.Api.v1_1.Services.Profile.ConstantsLocationType LocationTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Distance {
+            get {
+                return this.DistanceField;
+            }
+            set {
+                if ((this.DistanceField.Equals(value) != true)) {
+                    this.DistanceField = value;
+                    this.RaisePropertyChanged("Distance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Trustev.Api.v1_1.Services.Profile.ConstantsLocationType LocationType {
+            get {
+                return this.LocationTypeField;
+            }
+            set {
+                if ((this.LocationTypeField.Equals(value) != true)) {
+                    this.LocationTypeField = value;
+                    this.RaisePropertyChanged("LocationType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Constants.LocationType", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types")]
+    public enum ConstantsLocationType : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Residential = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Business = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        General = 2,
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -392,6 +800,114 @@ namespace Trustev.Api.v1_1.Services.Profile {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CreateRetailProfileRequest", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
+        "ofile.Retail")]
+    [System.SerializableAttribute()]
+    public partial class CreateRetailProfileRequest : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double DeviceLatitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double DeviceLongtitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid IdentityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Trustev.Api.v1_1.Services.Profile.ConstantsRetailDecisionReason ReasonField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double DeviceLatitude {
+            get {
+                return this.DeviceLatitudeField;
+            }
+            set {
+                if ((this.DeviceLatitudeField.Equals(value) != true)) {
+                    this.DeviceLatitudeField = value;
+                    this.RaisePropertyChanged("DeviceLatitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double DeviceLongtitude {
+            get {
+                return this.DeviceLongtitudeField;
+            }
+            set {
+                if ((this.DeviceLongtitudeField.Equals(value) != true)) {
+                    this.DeviceLongtitudeField = value;
+                    this.RaisePropertyChanged("DeviceLongtitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid IdentityId {
+            get {
+                return this.IdentityIdField;
+            }
+            set {
+                if ((this.IdentityIdField.Equals(value) != true)) {
+                    this.IdentityIdField = value;
+                    this.RaisePropertyChanged("IdentityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Trustev.Api.v1_1.Services.Profile.ConstantsRetailDecisionReason Reason {
+            get {
+                return this.ReasonField;
+            }
+            set {
+                if ((this.ReasonField.Equals(value) != true)) {
+                    this.ReasonField = value;
+                    this.RaisePropertyChanged("Reason");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Constants.RetailDecisionReason", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types")]
+    public enum ConstantsRetailDecisionReason : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        NotSet = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CustomerChoice = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CustomerNotAccepted = 2,
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AddressVerificationRequest", Namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Pr" +
         "ofile.Requests")]
     [System.SerializableAttribute()]
@@ -430,6 +946,12 @@ namespace Trustev.Api.v1_1.Services.Profile {
         [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IProfileService/GetProfileByTransaction", ReplyAction="https://api.trustev.com/IProfileService/GetProfileByTransactionResponse")]
         Trustev.Api.v1_1.Services.Profile.GetProfileResponse GetProfileByTransaction(string id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IProfileService/CreateRetailProfileByIdentity", ReplyAction="https://api.trustev.com/IProfileService/CreateRetailProfileByIdentityResponse")]
+        Trustev.Api.v1_1.Services.Profile.CreateRetailProfileResponse CreateRetailProfileByIdentity(Trustev.Api.v1_1.Services.Profile.CreateRetailProfileRequest request, string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IProfileService/GetRetailProfile", ReplyAction="https://api.trustev.com/IProfileService/GetRetailProfileResponse")]
+        Trustev.Api.v1_1.Services.Profile.GetRetailProfileResponse GetRetailProfile(string id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="https://api.trustev.com/IProfileService/VerifyAddress", ReplyAction="https://api.trustev.com/IProfileService/VerifyAddressResponse")]
         Trustev.Api.v1_1.Services.Profile.AddressVerificationResponse VerifyAddress(Trustev.Api.v1_1.Services.Profile.AddressVerificationRequest request, string type, string id);
     }
@@ -467,6 +989,14 @@ namespace Trustev.Api.v1_1.Services.Profile {
         
         public Trustev.Api.v1_1.Services.Profile.GetProfileResponse GetProfileByTransaction(string id) {
             return base.Channel.GetProfileByTransaction(id);
+        }
+        
+        public Trustev.Api.v1_1.Services.Profile.CreateRetailProfileResponse CreateRetailProfileByIdentity(Trustev.Api.v1_1.Services.Profile.CreateRetailProfileRequest request, string id) {
+            return base.Channel.CreateRetailProfileByIdentity(request, id);
+        }
+        
+        public Trustev.Api.v1_1.Services.Profile.GetRetailProfileResponse GetRetailProfile(string id) {
+            return base.Channel.GetRetailProfile(id);
         }
         
         public Trustev.Api.v1_1.Services.Profile.AddressVerificationResponse VerifyAddress(Trustev.Api.v1_1.Services.Profile.AddressVerificationRequest request, string type, string id) {

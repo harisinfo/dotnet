@@ -26,6 +26,7 @@
     <MetadataFile FileName="ProfileService2.wsdl" MetadataType="Wsdl" ID="cf83b7ec-c7bd-4c9c-8ea3-010ca14fb75b" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?wsdl" />
     <MetadataFile FileName="ProfileService1.disco" MetadataType="Disco" ID="f75e4bf0-e3bd-41d5-bfe7-b6c8c2f367b0" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?disco" />
     <MetadataFile FileName="ProfileService21.wsdl" MetadataType="Wsdl" ID="843456ed-9ad3-4266-8af5-e41801832ee3" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProfileService.xsd" MetadataType="Schema" ID="09ca9dd1-07f9-4aaf-b3e0-2e9f3bda7ada" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd8" />
     <MetadataFile FileName="ProfileService7.xsd" MetadataType="Schema" ID="d9bf6404-c451-4577-98f8-b77942d939be" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd0" />
     <MetadataFile FileName="ProfileService71.xsd" MetadataType="Schema" ID="d6b9b09d-ca87-4357-8395-e1e5f4a945cd" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd1" />
     <MetadataFile FileName="ProfileService72.xsd" MetadataType="Schema" ID="bf663b4f-b7db-4301-9c27-1583c084ee07" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd2" />
@@ -33,6 +34,7 @@
     <MetadataFile FileName="ProfileService74.xsd" MetadataType="Schema" ID="f0c7df77-43ea-4ca9-8e0d-dd8f556fadaa" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd4" />
     <MetadataFile FileName="ProfileService75.xsd" MetadataType="Schema" ID="a90ec190-018d-4eff-b39d-1732d555300d" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd5" />
     <MetadataFile FileName="ProfileService76.xsd" MetadataType="Schema" ID="19aaf88a-55e1-4d4b-a3be-32f2dad3a0d3" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ProfileService1.xsd" MetadataType="Schema" ID="fa6b0b30-2015-4d2f-b055-486d07202364" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd7" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

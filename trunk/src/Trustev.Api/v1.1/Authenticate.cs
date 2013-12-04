@@ -8,6 +8,7 @@ using System.Diagnostics;
 
 using Trustev.Api.v1_1.Behaviours;
 using Trustev.Api.v1_1.Helpers;
+using Trustev.Api.v1_1.Models;
 using Trustev.Api.v1_1.Services.Authentication;
 
 namespace Trustev.Api.v1_1
@@ -17,6 +18,9 @@ namespace Trustev.Api.v1_1
         AuthenticationServiceClient service;
         AuthenticationServiceClient serviceNoAuth;        
 
+        /// <summary>
+        /// Create a new instance of the Authenticate class
+        /// </summary>
         public Authenticate()
         {
             XAuthBehaviour behaviour = new XAuthBehaviour();
@@ -27,6 +31,9 @@ namespace Trustev.Api.v1_1
             service.Endpoint.Behaviors.Add(behaviour);
         }
 
+        /// <summary>
+        /// Create a new instance of the Authenticate class with username, password and secret specified
+        /// </summary>
         public Authenticate(String username, String password, String secret)
         {
             XAuthBehaviour behaviour = new XAuthBehaviour();
@@ -42,6 +49,9 @@ namespace Trustev.Api.v1_1
             AuthenticationToken.Instance.Timestamp = DateTime.UtcNow;
         }
 
+        /// <summary>
+        /// Create a new authentication token
+        /// </summary>
         public CreateTokenResponse GetToken()
         {
             string passwordHash = AuthenticationHelper.Instance.PasswordHashHelper(AuthenticationToken.Instance.Password, AuthenticationToken.Instance.Secret, AuthenticationToken.Instance.Timestamp);
@@ -61,11 +71,17 @@ namespace Trustev.Api.v1_1
             return response;
         }
 
+        /// <summary>
+        /// Authenticate a user based upon a username and password combination
+        /// </summary>
         public AuthenticateUserResponse AuthenticateUser(AuthenticateUserRequest request)
         {
             return service.AuthenticateUser(request);
         }
 
+        /// <summary>
+        /// Begin a new User Password Reset process
+        /// </summary>
         public void ResetUserPassword(ResetUserPasswordRequest request)
         {
             service.ResetUserPassword(request);

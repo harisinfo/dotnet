@@ -8,7 +8,9 @@ using System.Security.Cryptography.X509Certificates;
 using System.Runtime.Serialization;
 using System.Text;
 using NUnit.Framework;
+
 using Trustev.Api.v1_1;
+using Trustev.Api.v1_1.Models;
 using Trustev.Api.v1_1.Services.Authentication;
 
 namespace Trustev.Api.UnitTest.v1_1
@@ -20,7 +22,7 @@ namespace Trustev.Api.UnitTest.v1_1
         private string _password;
         private string _sharedsecret;
         private DateTime _timestamp;
-        private Authenticate service;
+        private Authenticate _service;
 
         [SetUp]
         public void Setup()
@@ -35,18 +37,18 @@ namespace Trustev.Api.UnitTest.v1_1
                    return true;
                };
 
-            _username = "testtrustev";
-            _password = "6af92077e0f325a0df39f694cfecc113";
-            _sharedsecret = "5160574c3159333093f1c7bf92756366";
+            _username = System.Configuration.ConfigurationManager.AppSettings["TrustevApiUsername"];
+            _password = System.Configuration.ConfigurationManager.AppSettings["TrustevApiPassword"];
+            _sharedsecret = System.Configuration.ConfigurationManager.AppSettings["TrustevApiSecret"];
             _timestamp = DateTime.UtcNow;
 
-            service = new Authenticate(_username, _password, _sharedsecret);
+            _service = new Authenticate(_username, _password, _sharedsecret);
         }
 
         [Test]
         public void GetTokenTest()
         {
-            CreateTokenResponse response = service.GetToken();
+            CreateTokenResponse response = _service.GetToken();
 
             Trace.WriteLine(String.Format("Response Code: {0}", response.Code));
             Trace.WriteLine(String.Format("Response Message: {0}", response.Message));
@@ -75,7 +77,7 @@ namespace Trustev.Api.UnitTest.v1_1
         [Test]
         public void AuthenticateUserPass()
         {
-            AuthenticateUserResponse res = service.AuthenticateUser(new AuthenticateUserRequest() { UserName = "ChrisKennedy", Password = "cJR9Aetx" });
+            AuthenticateUserResponse res = _service.AuthenticateUser(new AuthenticateUserRequest() { UserName = "ChrisKennedy", Password = "cJR9Aetx" });
             Assert.NotNull(res);
         }
 
@@ -85,7 +87,7 @@ namespace Trustev.Api.UnitTest.v1_1
             List<ConstantsCommunicationType> type = new List<ConstantsCommunicationType>();
             type.Add(ConstantsCommunicationType.Email);
 
-            service.ResetUserPassword(new ResetUserPasswordRequest() { Email = "chris.kennedy@trustev.com", DeliveryMethod = type });
+            _service.ResetUserPassword(new ResetUserPasswordRequest() { Email = "chris.kennedy@trustev.com", DeliveryMethod = type });
         }
     }
 }

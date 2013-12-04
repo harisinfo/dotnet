@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="https://api.trustev.com" elementFormDefault="qualified" targetNamespace="https://api.trustev.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Responses" />
-  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" />
   <xs:element name="GetProfile">
     <xs:complexType>
       <xs:sequence>
@@ -32,10 +33,39 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CreateRetailProfileByIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" minOccurs="0" name="request" nillable="true" type="q3:CreateRetailProfileRequest" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRetailProfileByIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" minOccurs="0" name="CreateRetailProfileByIdentityResult" nillable="true" type="q4:CreateRetailProfileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRetailProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRetailProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" minOccurs="0" name="GetRetailProfileResult" nillable="true" type="q5:GetRetailProfileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="VerifyAddress">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" minOccurs="0" name="request" nillable="true" type="q3:AddressVerificationRequest" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" minOccurs="0" name="request" nillable="true" type="q6:AddressVerificationRequest" />
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -44,7 +74,7 @@
   <xs:element name="VerifyAddressResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Responses" minOccurs="0" name="VerifyAddressResult" nillable="true" type="q4:AddressVerificationResponse" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Responses" minOccurs="0" name="VerifyAddressResult" nillable="true" type="q7:AddressVerificationResponse" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

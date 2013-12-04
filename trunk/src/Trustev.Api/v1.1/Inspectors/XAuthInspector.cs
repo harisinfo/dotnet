@@ -9,6 +9,7 @@ using System.ServiceModel.Channels;
 using System.Reflection;
 
 using Trustev.Api.v1_1;
+using Trustev.Api.v1_1.Models;
 
 namespace Trustev.Api.v1_1.Inspectors
 {

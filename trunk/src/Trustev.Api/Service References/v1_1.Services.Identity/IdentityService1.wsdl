@@ -5,10 +5,36 @@
     <xsd:schema targetNamespace="https://api.trustev.com/Imports">
       <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd0" namespace="https://api.trustev.com" />
       <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Customer" />
-      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Identity" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Customer" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IIdentityService_GetIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentityFromSocial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromSocial" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentityFromSocial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromSocialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentityFromEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromEmail" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentityFromEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentityFromPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromPhone" />
+  </wsdl:message>
+  <wsdl:message name="IIdentityService_GetIdentityFromPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIdentityFromPhoneResponse" />
+  </wsdl:message>
   <wsdl:message name="IIdentityService_UpdateCustomer_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateCustomer" />
   </wsdl:message>
@@ -16,6 +42,22 @@
     <wsdl:part name="parameters" element="tns:UpdateCustomerResponse" />
   </wsdl:message>
   <wsdl:portType name="IIdentityService">
+    <wsdl:operation name="GetIdentity">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentity" message="tns:IIdentityService_GetIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityResponse" message="tns:IIdentityService_GetIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromSocial">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityFromSocial" message="tns:IIdentityService_GetIdentityFromSocial_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityFromSocialResponse" message="tns:IIdentityService_GetIdentityFromSocial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromEmail">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityFromEmail" message="tns:IIdentityService_GetIdentityFromEmail_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityFromEmailResponse" message="tns:IIdentityService_GetIdentityFromEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromPhone">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityFromPhone" message="tns:IIdentityService_GetIdentityFromPhone_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IIdentityService/GetIdentityFromPhoneResponse" message="tns:IIdentityService_GetIdentityFromPhone_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateCustomer">
       <wsdl:input wsaw:Action="https://api.trustev.com/IIdentityService/UpdateCustomer" message="tns:IIdentityService_UpdateCustomer_InputMessage" />
       <wsdl:output wsaw:Action="https://api.trustev.com/IIdentityService/UpdateCustomerResponse" message="tns:IIdentityService_UpdateCustomer_OutputMessage" />

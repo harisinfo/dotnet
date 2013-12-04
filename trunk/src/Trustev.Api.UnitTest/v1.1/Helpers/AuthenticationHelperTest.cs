@@ -21,10 +21,9 @@ namespace Trustev.Api.UnitTest.v1_1.Helpers
         [SetUp]
         public void Setup()
         {
-
-            _username = "trustev";
-            _password = "trustev123";
-            _sharedsecret = "c37e5b4b13954cd5a13bf37155427577";
+            _username = System.Configuration.ConfigurationManager.AppSettings["TrustevApiUsername"];
+            _password = System.Configuration.ConfigurationManager.AppSettings["TrustevApiPassword"];
+            _sharedsecret = System.Configuration.ConfigurationManager.AppSettings["TrustevApiSecret"];
             _timestamp = DateTime.UtcNow;
 
         }
@@ -33,7 +32,6 @@ namespace Trustev.Api.UnitTest.v1_1.Helpers
         public void Create256HashTest()
         {
             String result = AuthenticationHelper.Instance.Create256Hash(_username);
-            Console.WriteLine(result);
             Assert.IsNotNullOrEmpty(result);
         }
 
@@ -41,10 +39,7 @@ namespace Trustev.Api.UnitTest.v1_1.Helpers
         public void Create256HashTestMatchedValue()
         {
             String result = AuthenticationHelper.Instance.Create256Hash(_username);
-
-            Debug.Write("Test");
-
-            Assert.AreEqual(_username, "trustev");
+            Assert.IsNotNullOrEmpty(result);
         }
 
         [Test]
@@ -52,29 +47,20 @@ namespace Trustev.Api.UnitTest.v1_1.Helpers
         {
             String result = AuthenticationHelper.Instance.PasswordHashHelper(_password, _sharedsecret, _timestamp);
             Assert.IsNotNullOrEmpty(result);
-            Debug.Write("Test");
-            Console.WriteLine(result);
         }
 
         [Test]
         public void PasswordHashHelperTestMatchedValue()
         {
             String result = AuthenticationHelper.Instance.PasswordHashHelper(_password, _sharedsecret, _timestamp);
-
-            Debug.Write("Test");
-
-            Assert.AreEqual(_password, "trustev123");
+            Assert.IsNotNullOrEmpty(result);
         }
 
         [Test]
-
         public void Sha256HashHelperTest()
         {
-
             String result = AuthenticationHelper.Instance.Sha256HashHelper(_username, _sharedsecret, _timestamp);
             Assert.IsNotNullOrEmpty(result);
-            Debug.Write("Test");
-            Console.WriteLine(result);
 
         }
 

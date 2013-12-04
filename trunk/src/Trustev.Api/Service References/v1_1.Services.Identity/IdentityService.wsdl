@@ -34,6 +34,42 @@
     <wsp:PolicyReference URI="#BasicHttpBinding_IIdentityService_policy">
     </wsp:PolicyReference>
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIdentity">
+      <soap:operation soapAction="https://api.trustev.com/IIdentityService/GetIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromSocial">
+      <soap:operation soapAction="https://api.trustev.com/IIdentityService/GetIdentityFromSocial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromEmail">
+      <soap:operation soapAction="https://api.trustev.com/IIdentityService/GetIdentityFromEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIdentityFromPhone">
+      <soap:operation soapAction="https://api.trustev.com/IIdentityService/GetIdentityFromPhone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateCustomer">
       <soap:operation soapAction="https://api.trustev.com/IIdentityService/UpdateCustomer" style="document" />
       <wsdl:input>

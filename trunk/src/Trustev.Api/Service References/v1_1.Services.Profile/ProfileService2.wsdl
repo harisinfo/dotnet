@@ -9,7 +9,9 @@
       <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" />
       <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Shared" />
       <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
-      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Retail.Common" />
+      <xsd:import schemaLocation="https://127.0.0.1:444/v1.1/ProfileService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Profile.Requests" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IProfileService_GetProfile_InputMessage">
@@ -23,6 +25,18 @@
   </wsdl:message>
   <wsdl:message name="IProfileService_GetProfileByTransaction_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProfileByTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileService_CreateRetailProfileByIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRetailProfileByIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IProfileService_CreateRetailProfileByIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRetailProfileByIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetRetailProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetailProfile" />
+  </wsdl:message>
+  <wsdl:message name="IProfileService_GetRetailProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRetailProfileResponse" />
   </wsdl:message>
   <wsdl:message name="IProfileService_VerifyAddress_InputMessage">
     <wsdl:part name="parameters" element="tns:VerifyAddress" />
@@ -38,6 +52,14 @@
     <wsdl:operation name="GetProfileByTransaction">
       <wsdl:input wsaw:Action="https://api.trustev.com/IProfileService/GetProfileByTransaction" message="tns:IProfileService_GetProfileByTransaction_InputMessage" />
       <wsdl:output wsaw:Action="https://api.trustev.com/IProfileService/GetProfileByTransactionResponse" message="tns:IProfileService_GetProfileByTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRetailProfileByIdentity">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IProfileService/CreateRetailProfileByIdentity" message="tns:IProfileService_CreateRetailProfileByIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IProfileService/CreateRetailProfileByIdentityResponse" message="tns:IProfileService_CreateRetailProfileByIdentity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRetailProfile">
+      <wsdl:input wsaw:Action="https://api.trustev.com/IProfileService/GetRetailProfile" message="tns:IProfileService_GetRetailProfile_InputMessage" />
+      <wsdl:output wsaw:Action="https://api.trustev.com/IProfileService/GetRetailProfileResponse" message="tns:IProfileService_GetRetailProfile_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="VerifyAddress">
       <wsdl:input wsaw:Action="https://api.trustev.com/IProfileService/VerifyAddress" message="tns:IProfileService_VerifyAddress_InputMessage" />

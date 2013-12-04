@@ -1,47 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Customer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Customer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types" />
-  <xs:complexType name="UpdateCustomerRequest">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:ArrayOfAddress" />
-      <xs:element minOccurs="0" name="Email" nillable="true" type="tns:ArrayOfEmail" />
-      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
-    </xs:sequence>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Identity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Identity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" />
+  <xs:complexType name="GetIdentityResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types.DataContracts.v1_1.Base" base="q1:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CreatedAt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
-  <xs:element name="UpdateCustomerRequest" nillable="true" type="tns:UpdateCustomerRequest" />
-  <xs:complexType name="ArrayOfAddress">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
-  <xs:complexType name="Address">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Address3" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="CountryIsoA2Code" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
-      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Social.Verify.Types" minOccurs="0" name="Type" type="q1:Constants.AddressType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Address" nillable="true" type="tns:Address" />
-  <xs:complexType name="ArrayOfEmail">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Email" nillable="true" type="tns:Email" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEmail" nillable="true" type="tns:ArrayOfEmail" />
-  <xs:complexType name="Email">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IsDefault" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Email" nillable="true" type="tns:Email" />
+  <xs:element name="GetIdentityResponse" nillable="true" type="tns:GetIdentityResponse" />
 </xs:schema>

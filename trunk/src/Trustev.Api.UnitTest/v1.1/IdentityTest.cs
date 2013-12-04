@@ -10,12 +10,16 @@ using System.Text;
 using NUnit.Framework;
 
 using Trustev.Api.v1_1;
+using Trustev.Api.v1_1.Models;
 using Trustev.Api.v1_1.Services.Identity;
 
 namespace Trustev.Api.UnitTest.v1_1
 {
     public class IdentityTest
     {
+        private string _username;
+        private string _password;
+        private string _sharedsecret;
         private Identity service;
 
         [SetUp]
@@ -30,6 +34,11 @@ namespace Trustev.Api.UnitTest.v1_1
                {
                    return true;
                };
+
+            _username = System.Configuration.ConfigurationManager.AppSettings["TrustevApiUsername"];
+            _password = System.Configuration.ConfigurationManager.AppSettings["TrustevApiPassword"];
+            _sharedsecret = System.Configuration.ConfigurationManager.AppSettings["TrustevApiSecret"];
+
             service = new Identity();
         }
 

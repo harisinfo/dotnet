@@ -70,9 +70,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="v1.1\Authenticate.cs" />
-    <Compile Include="v1.1\AuthenticationToken.cs" />
+    <Compile Include="v1.1\Models\AuthenticationToken.cs" />
     <Compile Include="v1.1\Behaviours\XAuthBehaviour.cs" />
-    <Compile Include="v1.1\Constants.cs" />
+    <Compile Include="v1.1\Models\Constants.cs" />
     <Compile Include="v1.1\Helpers\AuthenticationHelper.cs" />
     <Compile Include="v1.1\Helpers\ServiceConfigHelper.cs" />
     <Compile Include="v1.1\Identity.cs" />
@@ -129,6 +129,21 @@
     <None Include="Service References\v1_1.Services.Identity\IdentityService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\v1_1.Services.Identity\IdentityService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Identity\IdentityService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Identity\Trustev.Api.v1_1.Services.Identity.GetIdentityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\ProfileService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\v1_1.Services.Profile\ProfileService2.wsdl" />
     <None Include="Service References\v1_1.Services.Profile\ProfileService21.wsdl" />
     <None Include="Service References\v1_1.Services.Profile\ProfileService7.xsd">
@@ -155,7 +170,13 @@
     <None Include="Service References\v1_1.Services.Profile\Trustev.Api.v1_1.Services.Profile.AddressVerificationResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\v1_1.Services.Profile\Trustev.Api.v1_1.Services.Profile.CreateRetailProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\v1_1.Services.Profile\Trustev.Api.v1_1.Services.Profile.GetProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\v1_1.Services.Profile\Trustev.Api.v1_1.Services.Profile.GetRetailProfileResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\v1_1.Services.Social\SocialService2.wsdl" />

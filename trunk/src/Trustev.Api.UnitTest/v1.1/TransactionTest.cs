@@ -6,6 +6,7 @@ using NUnit;
 using NUnit.Framework;
 using Trustev.Api.v1_1.Services.Transaction;
 using Trustev.Api.v1_1.Helpers;
+using Trustev.Api.v1_1.Models;
 using Trustev.Api.v1_1;
 
 namespace Trustev.Api.UnitTest.v1_1
@@ -13,20 +14,26 @@ namespace Trustev.Api.UnitTest.v1_1
     [TestFixture]
     public class TransactionTest
     {
-        private String transactionNumber;
+        private string _username;
+        private string _password;
+        private string _sharedsecret;
+        private String _transactionNumber;
+        private Transaction _service;
 
         [TestFixtureSetUp]
         public void Setup()
         {
+            _username = System.Configuration.ConfigurationManager.AppSettings["TrustevApiUsername"];
+            _password = System.Configuration.ConfigurationManager.AppSettings["TrustevApiPassword"];
+            _sharedsecret = System.Configuration.ConfigurationManager.AppSettings["TrustevApiSecret"];
+            _transactionNumber = DateTime.UtcNow.ToString("yyyyMMddmmHHss");
 
-            transactionNumber = DateTime.UtcNow.ToString("yyyyMMddmmHHss");
+            _service = new Transaction();
         }
 
         [Test]
         public void AddTransactionTest()
-        {
-
- 
+        { 
             AddTransactionRequest request = new AddTransactionRequest();
             List<Address> address = new List<Address>();
             List<TransactionItem> items = new List<TransactionItem>();
@@ -38,8 +45,8 @@ namespace Trustev.Api.UnitTest.v1_1
                 Address3 = "Bessboro Road",
                 City = "Cork",
                 CountryIsoA2Code = "IE",
-                FirstName = "David",
-                LastName = "Devane",
+                FirstName = "Paul",
+                LastName = "Smith",
                 PostalCode = "CORK",
                 State = "CORK",
                 Type = Trustev.Api.v1_1.Services.Transaction.ConstantsAddressType.Billing
@@ -52,8 +59,8 @@ namespace Trustev.Api.UnitTest.v1_1
                 Address3 = "Bessboro Road",
                 City = "Cork",
                 CountryIsoA2Code = "IE",
-                FirstName = "David",
-                LastName = "Devane",
+                FirstName = "Paul",
+                LastName = "Smith",
                 PostalCode = "CORK",
                 State = "CORK",
                 Type = Trustev.Api.v1_1.Services.Transaction.ConstantsAddressType.Delivery
@@ -84,6 +91,9 @@ namespace Trustev.Api.UnitTest.v1_1
                 TotalDiscount = 0,
                 TotalTax = 2.10m
             };
+            request.TransactionNumber = _transactionNumber;
+
+            _service.AddTransaction(request);
         }
 
         [Test]
@@ -100,8 +110,8 @@ namespace Trustev.Api.UnitTest.v1_1
                 Address3 = "Bessboro Road",
                 City = "Cork",
                 CountryIsoA2Code = "IE",
-                FirstName = "David",
-                LastName = "Devane",
+                FirstName = "Paul",
+                LastName = "Smith",
                 PostalCode = "CORK",
                 State = "CORK",
                 Type = Trustev.Api.v1_1.Services.Transaction.ConstantsAddressType.Billing
@@ -114,8 +124,8 @@ namespace Trustev.Api.UnitTest.v1_1
                 Address3 = "Bessboro Road",
                 City = "Cork",
                 CountryIsoA2Code = "IE",
-                FirstName = "David",
-                LastName = "Devane",
+                FirstName = "Paul",
+                LastName = "Smith",
                 PostalCode = "CORK",
                 State = "CORK",
                 Type = Trustev.Api.v1_1.Services.Transaction.ConstantsAddressType.Delivery
@@ -146,24 +156,28 @@ namespace Trustev.Api.UnitTest.v1_1
                 TotalDiscount = 0,
                 TotalTax = 2.10m
             };
+
+            _service.UpdateTransaction(request, _transactionNumber);
         }
 
         [Test]
-        public void AddTransactionStatusTest(AddTransactionStatusRequest request)
+        public void AddTransactionStatusTest()
         {
-            TransactionServiceClient service = (TransactionServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Transaction);
+            AddTransactionStatusRequest request = new AddTransactionStatusRequest();
+            request.Comment = "Unit Test";
+            request.Reason = ConstantsOrderStatusReason.System;
+            request.Status = ConstantsOrderStatus.Completed;
 
-            service.AddTransactionStatus(request, "343");
+            _service.AddTransactionStatus(request, _transactionNumber);
         }
 
         [Test]
         public void AddTransactionBINTest()
         {
-            TransactionServiceClient service = (TransactionServiceClient)ServiceConfigHelper.Instance.GetService(Constants.ServiceType.Transaction);
-            AddTransactionBINRequest request = new AddTransactionBINRequest()
-            {
-                BINNumber = "123456"
-            };
+            AddTransactionBINRequest request = new AddTransactionBINRequest();
+            request.BINNumber = "123456";
+
+            _service.AddTransactionBIN(request, _transactionNumber);
         }
     }
 }

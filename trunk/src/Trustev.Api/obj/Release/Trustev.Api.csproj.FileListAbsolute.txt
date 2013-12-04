@@ -3,3 +3,4 @@ C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\bin\Release\Trustev.Api.
 C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\bin\Release\Trustev.Api.pdb
 C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\obj\Release\Trustev.Api.dll
 C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\obj\Release\Trustev.Api.pdb
+C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api\obj\Release\Trustev.Api.csprojResolveAssemblyReference.cache

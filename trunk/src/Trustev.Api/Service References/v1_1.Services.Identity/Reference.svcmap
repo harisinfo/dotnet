@@ -23,11 +23,13 @@
     <MetadataSource Address="https://127.0.0.1:444/v1.1/IdentityService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="IdentityService4.xsd" MetadataType="Schema" ID="778df080-3610-4379-8aa7-5c5647b7263d" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd5" />
     <MetadataFile FileName="IdentityService.disco" MetadataType="Disco" ID="0c938c89-7ab6-4b5d-8f4f-111bf3692098" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?disco" />
-    <MetadataFile FileName="IdentityService.xsd" MetadataType="Schema" ID="b5051eca-242c-4dee-a95e-f2b3f29286ac" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IdentityService41.xsd" MetadataType="Schema" ID="610eae90-16d4-41d3-9682-9ac334f3133b" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd4" />
     <MetadataFile FileName="IdentityService1.xsd" MetadataType="Schema" ID="0d9f94b8-744a-4c2f-85dd-666b1c800fdc" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd0" />
-    <MetadataFile FileName="IdentityService.wsdl" MetadataType="Wsdl" ID="0352e439-d1e1-4435-9c3b-2ea8bf7174f7" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?wsdl=wsdl0" />
     <MetadataFile FileName="IdentityService2.xsd" MetadataType="Schema" ID="ff717a7e-2c8a-463d-a1a4-e4385b557af0" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd3" />
+    <MetadataFile FileName="IdentityService.wsdl" MetadataType="Wsdl" ID="0352e439-d1e1-4435-9c3b-2ea8bf7174f7" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="IdentityService.xsd" MetadataType="Schema" ID="b5051eca-242c-4dee-a95e-f2b3f29286ac" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd1" />
     <MetadataFile FileName="IdentityService1.wsdl" MetadataType="Wsdl" ID="41a35b37-6d61-4c6d-89e6-78e1f18bbe79" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?wsdl" />
     <MetadataFile FileName="IdentityService3.xsd" MetadataType="Schema" ID="22baa2f1-1495-480a-869e-282a93ccb15c" SourceId="1" SourceUrl="https://127.0.0.1:444/v1.1/IdentityService.svc?xsd=xsd2" />
   </Metadata>

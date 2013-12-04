@@ -33,4 +33,28 @@
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="Constants.TrustevProfileScoreSource" nillable="true" type="tns:Constants.TrustevProfileScoreSource" />
+  <xs:simpleType name="Constants.RetailDecisionReason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotSet" />
+      <xs:enumeration value="CustomerChoice" />
+      <xs:enumeration value="CustomerNotAccepted" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.RetailDecisionReason" nillable="true" type="tns:Constants.RetailDecisionReason" />
+  <xs:simpleType name="Constants.DecisionCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FAIL" />
+      <xs:enumeration value="FLAG" />
+      <xs:enumeration value="PASS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.DecisionCode" nillable="true" type="tns:Constants.DecisionCode" />
+  <xs:simpleType name="Constants.LocationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Residential" />
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="General" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Constants.LocationType" nillable="true" type="tns:Constants.LocationType" />
 </xs:schema>
