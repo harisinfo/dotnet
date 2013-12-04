@@ -57,7 +57,15 @@
     <Compile Include="v1.1\TransactionTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="app.Debug.config">
+      <DependentUpon>App.config</DependentUpon>
+    </Content>
+    <Content Include="app.Release.config">
+      <DependentUpon>App.config</DependentUpon>
+    </Content>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -70,11 +78,12 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" Condition=" '$(OS)' == 'Windows_NT' " />
+  <Target Name="BeforeBuild" Condition=" '$(OS)' == 'Windows_NT' ">
+    <MakeDir Directories="$(IntermediateOutputPath)" />
+    <TransformXml Source="App.config" Destination="$(IntermediateOutputPath)$(TargetFileName).config" Transform="App.$(Configuration).config" ContinueOnError="False" StackTrace="True" />
   </Target>
-  <Target Name="AfterBuild">
+  <Target Name="AfterBuild" Condition=" '$(OS)' == 'Windows_NT' ">
+    <Copy SourceFiles="$(IntermediateOutputPath)$(TargetFileName).config" DestinationFiles="$(OutputPath)$(TargetFileName).config" />
   </Target>
-  -->
 </Project>

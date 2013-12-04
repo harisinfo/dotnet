@@ -33,24 +33,11 @@ namespace Trustev.Api.UnitTest.v1_1
         }
 
         [Test]
-        public void CreateRetailProfileTest()
-        {
-        }
-
-        [Test]
         public void GetProfileTest()
         {
             GetProfileResponse response = _service.GetProfileByTransaction(_transactionNumber);
 
             Assert.NotNull(response);
         }
-
-        [Test]
-        public void GetRetailProfileTest()
-        {
-        }
-
-
-
     }
 }

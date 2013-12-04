@@ -77,7 +77,7 @@ namespace Trustev.Api.UnitTest.v1_1
         [Test]
         public void AuthenticateUserPass()
         {
-            AuthenticateUserResponse res = _service.AuthenticateUser(new AuthenticateUserRequest() { UserName = "ChrisKennedy", Password = "cJR9Aetx" });
+            AuthenticateUserResponse res = _service.AuthenticateUser(new AuthenticateUserRequest() { UserName = "", Password = "" });
             Assert.NotNull(res);
         }
 
@@ -87,7 +87,7 @@ namespace Trustev.Api.UnitTest.v1_1
             List<ConstantsCommunicationType> type = new List<ConstantsCommunicationType>();
             type.Add(ConstantsCommunicationType.Email);
 
-            _service.ResetUserPassword(new ResetUserPasswordRequest() { Email = "chris.kennedy@trustev.com", DeliveryMethod = type });
+            _service.ResetUserPassword(new ResetUserPasswordRequest() { Email = "", DeliveryMethod = type });
         }
     }
 }

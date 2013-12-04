@@ -22,7 +22,7 @@ namespace Trustev.Api.v1_1.Helpers
 
         private ServiceConfigHelper()
         {
-            TrustevApiBaseAddress = "https://127.0.0.1:444/v1.1/";
+            TrustevApiBaseAddress = System.Configuration.ConfigurationManager.AppSettings["TrustevApiUrl"];
         }
 
         public static ServiceConfigHelper Instance

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1027]C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\Trustev.Api.UnitTest.dll</TopNode>
+  <SelectedNode>[0-1004]Trustev.Api.UnitTest.v1_1.AuthenticateTest.ResetUserPasswordPass</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1027]C:\Projects\Trustev.GitHub\dotnet\trunk\src\Trustev.Api.UnitTest\bin\Debug\Trustev.Api.UnitTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1028]Trustev" Expanded="true" />
+    <Node UniqueName="[0-1029]Trustev.Api" Expanded="true" />
+    <Node UniqueName="[0-1030]Trustev.Api.UnitTest" Expanded="true" />
+    <Node UniqueName="[0-1031]Trustev.Api.UnitTest.v1_1" Expanded="true" />
+    <Node UniqueName="[0-1000]Trustev.Api.UnitTest.v1_1.AuthenticateTest" Expanded="true" />
+    <Node UniqueName="[0-1032]Trustev.Api.UnitTest.v1_1.Helpers" Expanded="true" />
+    <Node UniqueName="[0-1005]Trustev.Api.UnitTest.v1_1.Helpers.AuthenticationHelperTest" Expanded="true" />
+    <Node UniqueName="[0-1011]Trustev.Api.UnitTest.v1_1.Helpers.ServiceConfigHelperTest" Expanded="true" />
+    <Node UniqueName="[0-1014]Trustev.Api.UnitTest.v1_1.IdentityTest" Expanded="true" />
+    <Node UniqueName="[0-1016]Trustev.Api.UnitTest.v1_1.ProfileTest" Expanded="true" />
+    <Node UniqueName="[0-1018]Trustev.Api.UnitTest.v1_1.SocialTest" Expanded="true" />
+    <Node UniqueName="[0-1022]Trustev.Api.UnitTest.v1_1.TransactionTest" Expanded="true" />
+  </Nodes>
+</VisualState>

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Services" />
     <Reference Include="System.Runtime.Serialization" />
@@ -85,7 +86,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Service References\v1_1.Services.Authentication\AuthenticationService2.wsdl" />
     <None Include="Service References\v1_1.Services.Authentication\AuthenticationService21.wsdl" />
     <None Include="Service References\v1_1.Services.Authentication\AuthenticationService5.xsd">
