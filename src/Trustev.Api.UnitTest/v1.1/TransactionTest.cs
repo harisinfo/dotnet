@@ -75,6 +75,7 @@ namespace Trustev.Api.UnitTest.v1_1
                 TotalBeforeTax = 10,
                 TotalDiscount = 0,
                 TotalTax = 2.10M,
+                TotalItemValue = 12.120M,
                 URL = "https://www.trustev.com"
             });
 
@@ -89,7 +90,8 @@ namespace Trustev.Api.UnitTest.v1_1
                 TotalBeforeTax = 10,
                 TotalDelivery = 0,
                 TotalDiscount = 0,
-                TotalTax = 2.10m
+                TotalTax = 2.10m,
+                TotalTransactionValue = 12.10M
             };
             request.TransactionNumber = _transactionNumber;
 
@@ -140,6 +142,7 @@ namespace Trustev.Api.UnitTest.v1_1
                 TotalBeforeTax = 10,
                 TotalDiscount = 0,
                 TotalTax = 2.10M,
+                TotalItemValue = 12.10M,
                 URL = "https://www.trustev.com"
             });
 
@@ -154,7 +157,8 @@ namespace Trustev.Api.UnitTest.v1_1
                 TotalBeforeTax = 10,
                 TotalDelivery = 0,
                 TotalDiscount = 0,
-                TotalTax = 2.10m
+                TotalTax = 2.10m,
+                TotalTransactionValue = 12.10M
             };
 
             _service.UpdateTransaction(request, _transactionNumber);

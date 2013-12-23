@@ -11,6 +11,7 @@
       <xs:element minOccurs="0" name="TotalDelivery" type="xs:decimal" />
       <xs:element minOccurs="0" name="TotalDiscount" type="xs:decimal" />
       <xs:element minOccurs="0" name="TotalTax" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalTransactionValue" type="xs:decimal" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TransactionData" nillable="true" type="tns:TransactionData" />
@@ -49,6 +50,7 @@
       <xs:element minOccurs="0" name="Quantity" type="xs:int" />
       <xs:element minOccurs="0" name="TotalBeforeTax" type="xs:decimal" />
       <xs:element minOccurs="0" name="TotalDiscount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalItemValue" type="xs:decimal" />
       <xs:element minOccurs="0" name="TotalTax" type="xs:decimal" />
       <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
     </xs:sequence>

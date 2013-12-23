@@ -283,6 +283,9 @@ namespace Trustev.Api.v1_1.Services.Transaction {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal TotalTaxField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TotalTransactionValueField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -393,6 +396,19 @@ namespace Trustev.Api.v1_1.Services.Transaction {
                 if ((this.TotalTaxField.Equals(value) != true)) {
                     this.TotalTaxField = value;
                     this.RaisePropertyChanged("TotalTax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal TotalTransactionValue {
+            get {
+                return this.TotalTransactionValueField;
+            }
+            set {
+                if ((this.TotalTransactionValueField.Equals(value) != true)) {
+                    this.TotalTransactionValueField = value;
+                    this.RaisePropertyChanged("TotalTransactionValue");
                 }
             }
         }
@@ -646,6 +662,9 @@ namespace Trustev.Api.v1_1.Services.Transaction {
         private decimal TotalDiscountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TotalItemValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal TotalTaxField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -735,6 +754,19 @@ namespace Trustev.Api.v1_1.Services.Transaction {
                 if ((this.TotalDiscountField.Equals(value) != true)) {
                     this.TotalDiscountField = value;
                     this.RaisePropertyChanged("TotalDiscount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal TotalItemValue {
+            get {
+                return this.TotalItemValueField;
+            }
+            set {
+                if ((this.TotalItemValueField.Equals(value) != true)) {
+                    this.TotalItemValueField = value;
+                    this.RaisePropertyChanged("TotalItemValue");
                 }
             }
         }
